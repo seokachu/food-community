@@ -1,0 +1,12 @@
+{
+  "display-lg": { "fontSize": "font-size-800", "fontWeight": "font-weight-bold", "lineHeight": "font-line-height-tight" },
+  "display-md": { "fontSize": "font-size-700", "fontWeight": "font-weight-bold", "lineHeight": "font-line-height-tight" },
+  "display-sm": { "fontSize": "font-size-600", "fontWeight": "font-weight-bold", "lineHeight": "font-line-height-tight" },
+  "heading-lg": { "fontSize": "font-size-500", "fontWeight": "font-weight-bold", "lineHeight": "font-line-height-tight" },
+  "heading-md": { "fontSize": "font-size-400", "fontWeight": "font-weight-bold", "lineHeight": "font-line-height-tight" },
+  "heading-sm": { "fontSize": "font-size-300", "fontWeight": "font-weight-semibold", "lineHeight": "font-line-height-tight" },
+  "body-lg": { "fontSize": "font-size-300", "fontWeight": "font-weight-regular", "lineHeight": "font-line-height-normal" },
+  "body-md": { "fontSize": "font-size-200", "fontWeight": "font-weight-regular", "lineHeight": "font-line-height-normal" },
+  "label-lg": { "fontSize": "font-size-200", "fontWeight": "font-weight-semibold", "lineHeight": "font-line-height-normal" },
+  "label-md": { "fontSize": "font-size-100", "fontWeight": "font-weight-regular", "lineHeight": "font-line-height-normal" }
+}
