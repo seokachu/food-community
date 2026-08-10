@@ -1,10 +1,17 @@
 import "server-only";
 
 import type { SupabaseServerClient, User } from "@/lib/supabase/server";
+import { PROFILE_IMAGE_BUCKET, publicStorageUrl } from "@/lib/supabase/storage";
 
 export interface AppProfile {
   nickname: string;
   imagePath: string | null;
+}
+
+/** BFF 응답과 서버 컴포넌트가 함께 쓰는 화면용 프로필. */
+export interface ProfileView {
+  nickname: string;
+  imageUrl: string | null;
 }
 
 /**
@@ -27,6 +34,34 @@ export function displayNameOf(user: {
     user.email?.split("@")[0] ??
     "회원"
   );
+}
+
+/** getClaims() 가 돌려주는 JWT 클레임에서 표시용 닉네임을 만든다. */
+export function displayNameOfClaims(claims: {
+  email?: unknown;
+  user_metadata?: unknown;
+}) {
+  return displayNameOf({
+    email: typeof claims.email === "string" ? claims.email : undefined,
+    user_metadata:
+      (claims.user_metadata as Record<string, unknown> | null) ?? null,
+  });
+}
+
+/**
+ * profile 행을 화면·API 응답용으로 바꾼다. 행이 아직 없으면(첫 로그인 직후 등)
+ * JWT 클레임의 Google 이름으로 대체한다. image_path 는 여기서만 전체 URL 이 된다.
+ */
+export function toProfileView(
+  profile: AppProfile | null,
+  claims: { email?: unknown; user_metadata?: unknown },
+): ProfileView {
+  return {
+    nickname: profile?.nickname ?? displayNameOfClaims(claims),
+    imageUrl: profile?.imagePath
+      ? publicStorageUrl(PROFILE_IMAGE_BUCKET, profile.imagePath)
+      : null,
+  };
 }
 
 export function avatarUrlOf(user: { user_metadata?: Record<string, unknown> | null }) {

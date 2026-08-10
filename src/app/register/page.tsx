@@ -13,34 +13,87 @@ import { TextField } from "@/components/ui/TextField";
 import { Textarea } from "@/components/ui/Textarea";
 import { Toast } from "@/components/ui/Toast";
 import { TopNavigation } from "@/components/ui/TopNavigation";
+import {
+  PLACE_ADDRESS_PENDING,
+  PLACE_IMAGE_ACCEPT,
+  validatePlaceContent,
+  validatePlaceImages,
+  validatePlaceTitle,
+} from "@/lib/place-rules";
 
 const INTRO_MAX_LENGTH = 2000;
 
-/** 주소 검색 SDK 자리. 지금은 버튼을 누르면 시안의 주소가 들어온다. */
-const SAMPLE_ADDRESS = "경기 광명시 가학로 88 산마루 1층";
+/** 같은 파일을 두 번 고르면 목록이 중복되므로 이 키로 걸러낸다. */
+const fileKey = (file: File) => `${file.name}:${file.size}:${file.lastModified}`;
 
 export default function RegisterPage() {
-  const [name, setName] = useState("");
-  const [intro, setIntro] = useState("");
-  const [address, setAddress] = useState("");
-  const [photo, setPhoto] = useState<string | null>(null);
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const [files, setFiles] = useState<File[]>([]);
   const [dragover, setDragover] = useState(false);
   // 제출을 눌러 본 뒤에야 에러를 보여준다. 입력 도중에 빨간 화면을 만들지 않는다.
   const [submitted, setSubmitted] = useState(false);
+  const [pending, setPending] = useState(false);
+  const [serverError, setServerError] = useState<string | null>(null);
+  const [done, setDone] = useState(false);
+
+  // BFF(POST /api/places)와 같은 규칙(place-rules)으로 검사한다.
+  const titleCheck = validatePlaceTitle(title);
+  const contentCheck = validatePlaceContent(content);
+  const imagesCheck = validatePlaceImages(files);
 
   const errors = {
-    photo: photo ? undefined : "사진을 한 장 이상 올려주세요",
-    name: name.trim().length >= 2 ? undefined : "맛집 이름을 2자 이상 입력해주세요",
-    intro: intro.trim().length >= 10 ? undefined : "소개를 10자 이상 입력해주세요",
-    address: address ? undefined : "주소를 검색해서 선택해주세요",
+    photo: imagesCheck.ok ? undefined : imagesCheck.message,
+    title: titleCheck.ok ? undefined : titleCheck.message,
+    content: contentCheck.ok ? undefined : contentCheck.message,
   };
 
   const hasError = Object.values(errors).some(Boolean);
   const showErrors = submitted && hasError;
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleFilesSelected = (selected: FileList) => {
+    setDone(false);
+    setServerError(null);
+    setFiles((prev) => {
+      const seen = new Set(prev.map(fileKey));
+      return [...prev, ...Array.from(selected).filter((file) => !seen.has(fileKey(file)))];
+    });
+  };
+
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setSubmitted(true);
+    setServerError(null);
+    setDone(false);
+    if (hasError || pending) return;
+
+    setPending(true);
+    try {
+      const form = new FormData();
+      form.set("title", title);
+      form.set("content", content);
+      files.forEach((file) => form.append("images", file));
+
+      const response = await fetch("/api/places", { method: "POST", body: form });
+      const body = (await response.json().catch(() => null)) as {
+        ok: boolean;
+        error?: string;
+      } | null;
+
+      if (!response.ok || !body?.ok) {
+        setServerError(body?.error ?? "등록에 실패했습니다. 잠시 후 다시 시도해주세요");
+        return;
+      }
+
+      // 목록·상세 화면이 실데이터에 붙기 전이라 이 화면에서 완료를 알리고 폼을 비운다.
+      setDone(true);
+      setSubmitted(false);
+      setTitle("");
+      setContent("");
+      setFiles([]);
+    } finally {
+      setPending(false);
+    }
   };
 
   return (
@@ -74,13 +127,19 @@ export default function RegisterPage() {
               </p>
             </header>
 
-            {showErrors && <Toast tone="error" message="입력 내용을 확인해주세요" />}
+            {serverError ? (
+              <Toast tone="error" message={serverError} onClose={() => setServerError(null)} />
+            ) : showErrors ? (
+              <Toast tone="error" message="입력 내용을 확인해주세요" />
+            ) : done ? (
+              <Toast tone="success" message="맛집이 등록되었어요" onClose={() => setDone(false)} />
+            ) : null}
 
             <FileUploader
               helperText={
                 showErrors && errors.photo
-                  ? "사진을 다시 확인해주세요 · JPG, PNG · 최대 10MB"
-                  : "JPG, PNG · 최대 10MB"
+                  ? `${errors.photo} · JPG, PNG, WebP · 최대 5MB`
+                  : "JPG, PNG, WebP · 최대 5MB"
               }
               prompt={
                 showErrors && errors.photo
@@ -92,67 +151,70 @@ export default function RegisterPage() {
               error={Boolean(showErrors && errors.photo)}
               dragover={dragover}
               onDragOverChange={setDragover}
-              accept="image/jpeg,image/png"
-              onFilesSelected={(files) => setPhoto(files[0]?.name ?? null)}
+              accept={PLACE_IMAGE_ACCEPT}
+              multiple
+              disabled={pending}
+              onFilesSelected={handleFilesSelected}
             >
-              {photo && (
+              {files.map((file, index) => (
                 <FileItem
-                  name={photo}
-                  state="complete"
-                  onRemove={() => setPhoto(null)}
+                  key={fileKey(file)}
+                  name={file.name}
+                  state={pending ? "uploading" : "complete"}
+                  statusText={pending ? undefined : "첨부 완료"}
+                  onRemove={
+                    pending
+                      ? undefined
+                      : () => setFiles((prev) => prev.filter((_, i) => i !== index))
+                  }
                 />
-              )}
+              ))}
             </FileUploader>
 
             <TextField
               label="맛집 이름 *"
               placeholder="맛집 이름 입력"
-              value={name}
-              onChange={(event) => setName(event.target.value)}
-              error={showErrors ? errors.name : undefined}
+              value={title}
+              onChange={(event) => setTitle(event.target.value)}
+              error={showErrors ? errors.title : undefined}
+              disabled={pending}
             />
 
             <Textarea
               label="소개 *"
               placeholder="맛집을 소개해주세요."
-              value={intro}
-              onChange={(event) => setIntro(event.target.value)}
+              value={content}
+              onChange={(event) => setContent(event.target.value)}
               maxLength={INTRO_MAX_LENGTH}
-              error={showErrors ? errors.intro : undefined}
+              error={showErrors ? errors.content : undefined}
+              disabled={pending}
             />
 
+            {/* 주소 검색은 다음 단계에서 붙인다. 그때까지 서버가 자리표시 값으로 저장한다. */}
             <div className="flex flex-col gap-2">
               <TextField
-                label="주소 *"
+                label="주소"
                 leftIcon="search"
-                placeholder="주소를 검색해주세요"
-                value={address}
+                placeholder="주소 검색은 준비 중이에요"
+                value=""
                 readOnly
-                error={showErrors ? errors.address : undefined}
+                disabled
+                hint={`지금 등록하면 주소는 "${PLACE_ADDRESS_PENDING}"으로 저장돼요`}
               />
-              <Button
-                variant="secondary"
-                fullWidth
-                leftIcon="search"
-                onClick={() => setAddress(SAMPLE_ADDRESS)}
-              >
+              <Button variant="secondary" fullWidth leftIcon="search" disabled>
                 주소 검색
               </Button>
-              {address ? (
-                <MapPreview caption="광명동 · 가학산 입구" />
-              ) : (
-                <MapPreview variant="empty" />
-              )}
+              <MapPreview variant="empty" />
             </div>
 
             <Button
               type="submit"
               size="lg"
               fullWidth
-              disabled={showErrors}
+              disabled={pending || showErrors}
               leftIcon={showErrors ? "warning" : "check"}
             >
-              {showErrors ? "오류를 확인해주세요" : "등록하기"}
+              {pending ? "등록 중…" : showErrors ? "오류를 확인해주세요" : "등록하기"}
             </Button>
           </form>
         </NarrowColumn>

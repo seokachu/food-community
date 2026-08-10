@@ -3,7 +3,6 @@ import { redirect } from "next/navigation";
 
 import { AppShell } from "@/components/layout/AppShell";
 import { Container } from "@/components/layout/Container";
-import { Avatar } from "@/components/ui/Avatar";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import {
@@ -17,9 +16,11 @@ import { EmptyState } from "@/components/ui/EmptyState";
 import { IconButton } from "@/components/ui/IconButton";
 import { TopNavigation } from "@/components/ui/TopNavigation";
 import { signOut } from "@/lib/auth/actions";
-import { avatarUrlOf, displayNameOf, getProfile } from "@/lib/auth/profile";
+import { avatarUrlOf, getProfile, toProfileView } from "@/lib/auth/profile";
 import { getPlace, MY_POST_IDS } from "@/lib/places";
 import { createClient } from "@/lib/supabase/server";
+
+import { ProfileSection } from "./ProfileSection";
 
 export const metadata = {
   title: "마이 페이지 · 숨은맛집",
@@ -38,21 +39,16 @@ export default async function MyPage() {
     redirect("/login?next=/my");
   }
 
-  // 닉네임은 사용자가 고칠 수 있는 값이라 profile 테이블이 정답이다.
-  // 첫 로그인 직후 등 행이 아직 없을 때만 JWT 값으로 대체한다.
+  // 닉네임·사진은 사용자가 고칠 수 있는 값이라 profile 테이블이 정답이다.
+  // 첫 로그인 직후 등 행이 아직 없을 때만 JWT의 Google 값으로 대체한다.
   const userId = claims.sub as string;
   const profile = await getProfile(supabase, userId);
-  const nickname =
-    profile?.nickname ??
-    displayNameOf({
-      email: typeof claims.email === "string" ? claims.email : undefined,
+  const view = toProfileView(profile, claims);
+  const avatarUrl =
+    view.imageUrl ??
+    avatarUrlOf({
       user_metadata: claims.user_metadata as Record<string, unknown> | null,
     });
-
-  // 프로필 사진은 아직 업로드 기능이 없어 Google 아바타를 그대로 쓴다.
-  const avatarUrl = avatarUrlOf({
-    user_metadata: claims.user_metadata as Record<string, unknown> | null,
-  });
 
   const posts = MY_POST_IDS.map((id) => getPlace(id)!);
 
@@ -66,20 +62,8 @@ export default async function MyPage() {
       }
     >
       <Container className="flex flex-col gap-6 py-6 md:gap-10 md:py-10">
-        {/* 프로필 */}
-        <section className="flex items-center gap-4">
-          <Avatar size={88} tone="brand" src={avatarUrl} alt={`${nickname} 프로필 사진`} />
-          <div className="flex flex-col items-start gap-2.5">
-            <div className="flex items-center gap-2">
-              <h1 className="text-heading-md text-text-default">{nickname}</h1>
-              <IconButton icon="edit" label="닉네임 수정" size={32} />
-            </div>
-            <Badge tone="brand">Google 계정 연결됨</Badge>
-            <Button variant="secondary" leftIcon="image">
-              프로필 사진 변경
-            </Button>
-          </div>
-        </section>
+        {/* 프로필 — 닉네임·사진 변경은 클라이언트 컴포넌트가 BFF를 호출한다 */}
+        <ProfileSection nickname={view.nickname} avatarUrl={avatarUrl} />
 
         {/* 내가 쓴 글 — 1 → 2 → 3열 카드 그리드 */}
         <section className="flex flex-col gap-3">
