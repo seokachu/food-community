@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "tokens": "node scripts/generate-tokens.mjs",
+    "pwa-assets": "node scripts/generate-pwa-assets.mjs",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
@@ -37,6 +38,7 @@
     "eslint-config-next": "16.2.12",
     "eslint-plugin-storybook": "^10.5.5",
     "playwright": "^1.62.1",
+    "sharp": "^0.35.3",
     "storybook": "^10.5.5",
     "tailwindcss": "^4",
     "typescript": "^5",

@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 
 import { BottomNavigation } from "@/components/ui/BottomNavigation";
 import { HeaderNavigation } from "@/components/ui/HeaderNavigation";
+import { PwaInstallBanner } from "@/components/ui/PwaInstallBanner";
 import { cn } from "@/lib/cn";
 
 /**
@@ -50,6 +51,11 @@ export function AppShell({
       {showNavigation && (
         <BottomNavigation className="fixed inset-x-0 bottom-0 z-20 md:hidden" />
       )}
+
+      {/* 설치 유도 띠배너. 모바일에서는 바텀내비게이션(56px) 위에 얹는다. */}
+      <PwaInstallBanner
+        className={showNavigation ? "bottom-14 md:bottom-0" : "bottom-0"}
+      />
     </div>
   );
 }
