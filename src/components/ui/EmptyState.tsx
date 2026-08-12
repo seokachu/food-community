@@ -10,6 +10,8 @@ import { cn } from "@/lib/cn";
 export interface EmptyStateProps {
   /** 생략하면 비주얼 원이 빠진다. */
   icon?: IconName;
+  /** 장소 검색 결과 없음처럼 담백해야 하는 화면은 muted 로 아이콘만 누른다. */
+  iconTone?: "brand" | "muted";
   title: string;
   description?: string;
   /** 보통 Button 1~2개. */
@@ -19,6 +21,7 @@ export interface EmptyStateProps {
 
 export function EmptyState({
   icon,
+  iconTone = "brand",
   title,
   description,
   actions,
@@ -33,7 +36,11 @@ export function EmptyState({
     >
       {icon && (
         <span className="border-border-brand flex size-16 items-center justify-center rounded-full border">
-          <Icon name={icon} size={32} className="text-icon-brand" />
+          <Icon
+            name={icon}
+            size={32}
+            className={iconTone === "muted" ? "text-icon-muted" : "text-icon-brand"}
+          />
         </span>
       )}
       <h3 className="text-heading-sm text-text-default">{title}</h3>

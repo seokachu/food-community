@@ -1,5 +1,5 @@
 {
-  "version": "2.15",
+  "version": "2.17",
   "children": [
     {
       "type": "frame",
@@ -1099,41 +1099,23 @@
               "gap": "$spacing-8",
               "children": [
                 {
-                  "id": "mlkM8",
-                  "type": "ref",
-                  "ref": "PFsUy",
-                  "name": "주소 TextField",
-                  "width": "fill_container",
-                  "descendants": {
-                    "TVd6I": {
-                      "content": "주소 *"
-                    },
-                    "TDbKe": {
-                      "content": "주소를 검색해주세요"
-                    },
-                    "VVfYE": {
-                      "content": "주소를 검색해서 선택해주세요"
-                    }
-                  }
-                },
-                {
-                  "id": "axwtU",
+                  "id": "jllTG",
                   "type": "ref",
                   "ref": "xiJR5",
-                  "name": "주소 검색 Secondary Button",
+                  "name": "장소 입력하기 Secondary Button",
                   "width": "fill_container",
                   "descendants": {
                     "M4f5y": {
-                      "id": "sE7Kr",
+                      "id": "EAssO",
                       "type": "ref",
                       "ref": "hJLGs",
-                      "name": "주소 검색 아이콘",
+                      "name": "장소 검색 아이콘",
                       "width": 20,
                       "height": 20,
                       "fill": "$color-icon-on-inverse"
                     },
                     "oBPBO": {
-                      "content": "주소 검색"
+                      "content": "장소 입력하기"
                     },
                     "iQirP": {
                       "enabled": false
@@ -1180,7 +1162,7 @@
                       "type": "ref",
                       "ref": "O7fbW",
                       "name": "지도 비활성 안내",
-                      "content": "주소를 선택하면 위치가 표시돼요",
+                      "content": "장소를 선택하면 위치가 표시돼요",
                       "fill": "$color-text-muted"
                     }
                   ]
@@ -30208,25 +30190,23 @@
               ]
             },
             {
-              "id": "C2rH5",
+              "id": "VL9pg",
               "type": "ref",
-              "ref": "xiJR5",
-              "name": "로그아웃 버튼",
+              "ref": "HYfgM",
+              "name": "로그아웃 메뉴 항목",
               "width": "fill_container",
-              "height": 48,
               "descendants": {
-                "M4f5y": {
-                  "id": "Om9NN",
+                "JPHRr": {
+                  "id": "WJEfS",
                   "type": "ref",
-                  "ref": "RcGhC",
+                  "ref": "yFlGq",
                   "name": "로그아웃 아이콘",
-                  "fill": "$color-icon-on-inverse"
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-secondary"
                 },
-                "oBPBO": {
+                "DNEb2": {
                   "content": "로그아웃"
-                },
-                "iQirP": {
-                  "enabled": false
                 }
               }
             }
@@ -30285,6 +30265,1375 @@
                 },
                 "w0dm9c": {
                   "fill": "$color-text-brand"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "hwoaF",
+      "x": 4400,
+      "y": 0,
+      "name": "숨은맛집 · 맛집 등록",
+      "clip": true,
+      "width": 360,
+      "fill": "$color-background-default",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "GZtFM",
+          "name": "등록 상태 표시줄",
+          "width": "fill_container",
+          "height": 62,
+          "padding": [
+            0,
+            "$spacing-20"
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "qWusu",
+              "type": "ref",
+              "ref": "rA4ir",
+              "name": "등록 현재 시간",
+              "content": "9:41",
+              "fill": "$color-text-default"
+            },
+            {
+              "type": "frame",
+              "id": "kSIQZ",
+              "name": "등록 시스템 아이콘",
+              "gap": "$spacing-8",
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "fd818",
+                  "type": "ref",
+                  "ref": "y6mY2m",
+                  "name": "등록 상태 신호 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "Hvtfz",
+                  "type": "ref",
+                  "ref": "qohVE",
+                  "name": "등록 상태 연결 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "RvWja",
+                  "type": "ref",
+                  "ref": "o7lslP",
+                  "name": "등록 상태 배터리 아이콘",
+                  "width": 20,
+                  "height": 20,
+                  "fill": "$color-icon-default"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "POgC2",
+          "type": "ref",
+          "ref": "hqODY",
+          "name": "등록 Top Navigation",
+          "width": "fill_container",
+          "descendants": {
+            "cJ4N4": {
+              "content": "맛집 등록"
+            },
+            "w4xXkP": {
+              "id": "SeJOh",
+              "type": "ref",
+              "ref": "rA4ir",
+              "name": "임시 저장 텍스트",
+              "content": "임시저장",
+              "fill": "$color-text-secondary"
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "kJBDm",
+          "name": "등록 폼",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": "$spacing-24",
+          "padding": [
+            "$spacing-16",
+            "$spacing-16",
+            "$spacing-24",
+            "$spacing-16"
+          ],
+          "justifyContent": "end",
+          "children": [
+            {
+              "type": "frame",
+              "id": "bRNN2",
+              "name": "등록 안내",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": "$spacing-8",
+              "children": [
+                {
+                  "id": "TOeg1",
+                  "type": "ref",
+                  "ref": "suDJH",
+                  "name": "등록 안내 제목",
+                  "content": "나만 알던 한 끼를\n이웃에게 소개해요",
+                  "fill": "$color-text-default"
+                },
+                {
+                  "id": "qcfaR",
+                  "type": "ref",
+                  "ref": "PzihL",
+                  "name": "등록 안내 설명",
+                  "content": "사진 한 장과 짧은 이야기면 충분해요.",
+                  "fill": "$color-text-secondary"
+                }
+              ]
+            },
+            {
+              "id": "K850Cj",
+              "type": "ref",
+              "ref": "RBIL1",
+              "name": "사진 File Uploader",
+              "width": "fill_container",
+              "descendants": {
+                "RWqbo": {
+                  "content": "JPG, PNG · 최대 10MB"
+                },
+                "Ft8Wf": {
+                  "content": "사진을 드래그하거나 선택하세요"
+                }
+              }
+            },
+            {
+              "id": "wNm6h",
+              "type": "ref",
+              "ref": "xzxt7",
+              "name": "맛집 이름 TextField",
+              "width": "fill_container",
+              "descendants": {
+                "YmiDF": {
+                  "content": "맛집 이름 *"
+                },
+                "H48xo": {
+                  "enabled": false
+                },
+                "o7ufM": {
+                  "content": "맛집 이름을 입력해주세요"
+                },
+                "F9LDUq": {
+                  "enabled": false
+                },
+                "lu626": {
+                  "content": "2자 이상 입력해주세요"
+                }
+              }
+            },
+            {
+              "id": "xR5AP",
+              "type": "ref",
+              "ref": "TUIbT",
+              "name": "소개 Textarea",
+              "width": "fill_container",
+              "descendants": {
+                "yakMU": {
+                  "content": "소개 *"
+                },
+                "Ky6DJ": {
+                  "content": "맛집의 매력을 소개해주세요."
+                },
+                "pKWS4": {
+                  "content": "10자 이상 입력해주세요"
+                },
+                "rhkoZ": {
+                  "content": "0 / 2000"
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "SFiAY",
+              "name": "주소 입력",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": "$spacing-8",
+              "children": [
+                {
+                  "id": "cPPu8",
+                  "type": "ref",
+                  "ref": "xiJR5",
+                  "name": "장소 입력하기 Secondary Button",
+                  "width": "fill_container",
+                  "flipX": false,
+                  "flipY": false,
+                  "height": 40,
+                  "x": 0,
+                  "y": 0,
+                  "descendants": {
+                    "M4f5y": {
+                      "id": "Brvhb",
+                      "type": "ref",
+                      "ref": "hJLGs",
+                      "name": "장소 검색 아이콘",
+                      "width": 20,
+                      "height": 20,
+                      "fill": "$color-icon-on-inverse"
+                    },
+                    "oBPBO": {
+                      "content": "장소 입력하기"
+                    },
+                    "iQirP": {
+                      "enabled": false
+                    }
+                  }
+                },
+                {
+                  "type": "frame",
+                  "id": "dDspu",
+                  "name": "지도 비활성 상태",
+                  "width": "fill_container",
+                  "height": 146,
+                  "fill": "$color-background-subtle",
+                  "cornerRadius": 16,
+                  "layout": "vertical",
+                  "gap": "$spacing-8",
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "l0Hh8s",
+                      "name": "지도 비활성 아이콘 배경",
+                      "width": 42,
+                      "height": 42,
+                      "fill": "$color-background-neutral-soft",
+                      "cornerRadius": 9999,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "id": "eV6FT",
+                          "type": "ref",
+                          "ref": "yXXWd",
+                          "name": "지도 비활성 이미지 아이콘",
+                          "width": 24,
+                          "height": 24,
+                          "fill": "$color-icon-muted"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "VMsAf",
+                      "type": "ref",
+                      "ref": "O7fbW",
+                      "name": "지도 비활성 안내",
+                      "content": "장소를 선택하면 위치가 표시돼요",
+                      "fill": "$color-text-muted",
+                      "enabled": true
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "Sr2rw",
+              "type": "ref",
+              "ref": "u8QYqM",
+              "name": "등록 Primary Button",
+              "width": "fill_container",
+              "descendants": {
+                "awFiz": {
+                  "enabled": false
+                },
+                "rCnmy": {
+                  "content": "등록하기"
+                },
+                "ujax6": {
+                  "enabled": false
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "zZjTj",
+      "x": 4840,
+      "y": 0,
+      "name": "숨은맛집 · 장소 등록",
+      "clip": true,
+      "width": 360,
+      "fill": "$color-background-default",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "pMCR3",
+          "name": "장소 등록 상태 표시줄",
+          "width": "fill_container",
+          "height": 62,
+          "padding": [
+            0,
+            "$spacing-20"
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "g4x4k",
+              "type": "ref",
+              "ref": "rA4ir",
+              "name": "등록 현재 시간",
+              "content": "9:41",
+              "fill": "$color-text-default"
+            },
+            {
+              "type": "frame",
+              "id": "n4lOq",
+              "name": "등록 시스템 아이콘",
+              "gap": "$spacing-8",
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "edrUT",
+                  "type": "ref",
+                  "ref": "y6mY2m",
+                  "name": "등록 상태 신호 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "OTJUD",
+                  "type": "ref",
+                  "ref": "qohVE",
+                  "name": "등록 상태 연결 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "uMQI5",
+                  "type": "ref",
+                  "ref": "o7lslP",
+                  "name": "등록 상태 배터리 아이콘",
+                  "width": 20,
+                  "height": 20,
+                  "fill": "$color-icon-default"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "zU4pS",
+          "type": "ref",
+          "ref": "hqODY",
+          "name": "장소 등록 Top Navigation",
+          "width": "fill_container",
+          "descendants": {
+            "cJ4N4": {
+              "content": "장소 등록"
+            },
+            "w4xXkP": {
+              "enabled": false
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "dSBBn",
+          "name": "장소 등록 콘텐츠",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": "$spacing-16",
+          "padding": [
+            "$spacing-16",
+            0,
+            "$spacing-24",
+            0
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "PAbMH",
+              "type": "ref",
+              "ref": "xzxt7",
+              "name": "장소 검색 TextField",
+              "width": 328,
+              "descendants": {
+                "YmiDF": {
+                  "content": "장소 검색"
+                },
+                "H48xo": {
+                  "id": "E25TiX",
+                  "type": "ref",
+                  "ref": "hJLGs",
+                  "name": "검색 아이콘",
+                  "width": 20,
+                  "height": 20,
+                  "fill": "$color-icon-muted"
+                },
+                "o7ufM": {
+                  "content": "장소명 또는 주소를 입력해주세요"
+                },
+                "F9LDUq": {
+                  "enabled": false
+                },
+                "lu626": {
+                  "content": "검색 후 지도에서 위치를 확인해주세요"
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "qkyEG",
+              "name": "네이버 지도 이미지",
+              "width": "fill_container",
+              "height": 510,
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "public/images/naver-map-seoul-forest.png",
+                "mode": "fill"
+              },
+              "layout": "vertical",
+              "gap": "$spacing-8",
+              "justifyContent": "center",
+              "alignItems": "center"
+            },
+            {
+              "id": "s5iGoM",
+              "type": "ref",
+              "ref": "TQunc",
+              "name": "검색된 장소 주소 Card",
+              "width": 328,
+              "descendants": {
+                "juKRT": {
+                  "enabled": false,
+                  "width": 328
+                },
+                "O1C5rq": {
+                  "height": "fit_content",
+                  "padding": "$spacing-16",
+                  "gap": "$spacing-8"
+                },
+                "HU5lB": {
+                  "content": "서울숲 카페거리"
+                },
+                "qga7j": {
+                  "content": "서울특별시 성동구 서울숲2길 32-14",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container"
+                }
+              }
+            },
+            {
+              "id": "V93IBe",
+              "type": "ref",
+              "ref": "u8QYqM",
+              "name": "이 위치로 등록하기 Primary Button",
+              "width": 328,
+              "descendants": {
+                "awFiz": {
+                  "enabled": false
+                },
+                "rCnmy": {
+                  "content": "이 위치로 등록하기"
+                },
+                "ujax6": {
+                  "enabled": false
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "T2KC6",
+      "x": 5280,
+      "y": 0,
+      "name": "숨은맛집 · 장소 검색 결과",
+      "clip": true,
+      "width": 360,
+      "fill": "$color-background-default",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "u5Z0Q",
+          "name": "장소 등록 상태 표시줄",
+          "width": "fill_container",
+          "height": 62,
+          "padding": [
+            0,
+            "$spacing-20"
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "FymXN",
+              "type": "ref",
+              "ref": "rA4ir",
+              "name": "등록 현재 시간",
+              "content": "9:41",
+              "fill": "$color-text-default"
+            },
+            {
+              "type": "frame",
+              "id": "D7axz",
+              "name": "등록 시스템 아이콘",
+              "gap": "$spacing-8",
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "N3pYI",
+                  "type": "ref",
+                  "ref": "y6mY2m",
+                  "name": "등록 상태 신호 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "dXsHg",
+                  "type": "ref",
+                  "ref": "qohVE",
+                  "name": "등록 상태 연결 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "ckx3M",
+                  "type": "ref",
+                  "ref": "o7lslP",
+                  "name": "등록 상태 배터리 아이콘",
+                  "width": 20,
+                  "height": 20,
+                  "fill": "$color-icon-default"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "NSMR7",
+          "type": "ref",
+          "ref": "hqODY",
+          "name": "장소 등록 Top Navigation",
+          "width": "fill_container",
+          "descendants": {
+            "cJ4N4": {
+              "content": "장소 등록"
+            },
+            "w4xXkP": {
+              "enabled": false
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "nRYCg",
+          "name": "장소 등록 콘텐츠",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": "$spacing-16",
+          "padding": [
+            "$spacing-16",
+            0,
+            "$spacing-24",
+            0
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "PQWbX",
+              "type": "ref",
+              "ref": "mwnkn",
+              "name": "장소 검색 Focused TextField",
+              "width": 328,
+              "descendants": {
+                "HQNrh": {
+                  "content": "장소 검색"
+                },
+                "n8mq6": {
+                  "id": "KwJYr",
+                  "type": "ref",
+                  "ref": "hJLGs",
+                  "name": "검색 아이콘",
+                  "width": 20,
+                  "height": 20,
+                  "fill": "$color-icon-default"
+                },
+                "BExMB": {
+                  "content": "서울숲 카페"
+                },
+                "yaqAO": {
+                  "enabled": false
+                },
+                "dAQ1J": {
+                  "content": "네이버 장소 검색 결과를 불러왔어요"
+                }
+              }
+            },
+            {
+              "id": "T7EYV",
+              "type": "ref",
+              "ref": "rA4ir",
+              "name": "API 검색 결과 요약",
+              "content": "네이버 장소 검색 결과 · 3곳",
+              "fill": "$color-text-secondary"
+            },
+            {
+              "type": "frame",
+              "id": "AgNdw",
+              "name": "네이버 API 장소 결과 목록",
+              "width": 328,
+              "layout": "vertical",
+              "gap": "$spacing-8",
+              "children": [
+                {
+                  "id": "b5DET",
+                  "type": "ref",
+                  "ref": "TQunc",
+                  "name": "API 장소 결과 01",
+                  "width": "fill_container",
+                  "descendants": {
+                    "juKRT": {
+                      "enabled": false,
+                      "width": 328
+                    },
+                    "O1C5rq": {
+                      "height": "fit_content",
+                      "padding": "$spacing-16",
+                      "gap": "$spacing-8"
+                    },
+                    "HU5lB": {
+                      "content": "서울숲 카페거리"
+                    },
+                    "qga7j": {
+                      "content": "서울특별시 성동구 서울숲2길 32-14",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container"
+                    }
+                  }
+                },
+                {
+                  "id": "RdPX1",
+                  "type": "ref",
+                  "ref": "TQunc",
+                  "name": "API 장소 결과 02",
+                  "width": "fill_container",
+                  "descendants": {
+                    "juKRT": {
+                      "enabled": false,
+                      "width": 328
+                    },
+                    "O1C5rq": {
+                      "height": "fit_content",
+                      "padding": "$spacing-16",
+                      "gap": "$spacing-8"
+                    },
+                    "HU5lB": {
+                      "content": "서울숲 아뜰리에 카페"
+                    },
+                    "qga7j": {
+                      "content": "서울특별시 성동구 서울숲4길 18-11",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container"
+                    }
+                  }
+                },
+                {
+                  "id": "p8UO9",
+                  "type": "ref",
+                  "ref": "TQunc",
+                  "name": "API 장소 결과 03",
+                  "width": "fill_container",
+                  "descendants": {
+                    "juKRT": {
+                      "enabled": false,
+                      "width": 328
+                    },
+                    "O1C5rq": {
+                      "height": "fit_content",
+                      "padding": "$spacing-16",
+                      "gap": "$spacing-8"
+                    },
+                    "HU5lB": {
+                      "content": "서울숲 베이커리"
+                    },
+                    "qga7j": {
+                      "content": "서울특별시 성동구 왕십리로 83-21",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "Jnf0T",
+              "type": "ref",
+              "ref": "xiJR5",
+              "name": "검색 결과 없음 직접 입력 Button",
+              "width": 328,
+              "descendants": {
+                "M4f5y": {
+                  "enabled": false
+                },
+                "oBPBO": {
+                  "content": "찾는 장소가 없나요? 직접 입력"
+                },
+                "iQirP": {
+                  "enabled": false
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "mYJI1",
+      "x": 5720,
+      "y": 0,
+      "name": "숨은맛집 · 장소 검색 결과 없음",
+      "clip": true,
+      "width": 360,
+      "fill": "$color-background-default",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "dQsJE",
+          "name": "장소 등록 상태 표시줄",
+          "width": "fill_container",
+          "height": 62,
+          "padding": [
+            0,
+            "$spacing-20"
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "YFk86",
+              "type": "ref",
+              "ref": "rA4ir",
+              "name": "등록 현재 시간",
+              "content": "9:41",
+              "fill": "$color-text-default"
+            },
+            {
+              "type": "frame",
+              "id": "jgThl",
+              "name": "등록 시스템 아이콘",
+              "gap": "$spacing-8",
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "DUcPn",
+                  "type": "ref",
+                  "ref": "y6mY2m",
+                  "name": "등록 상태 신호 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "MtEvq",
+                  "type": "ref",
+                  "ref": "qohVE",
+                  "name": "등록 상태 연결 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "pqrAF",
+                  "type": "ref",
+                  "ref": "o7lslP",
+                  "name": "등록 상태 배터리 아이콘",
+                  "width": 20,
+                  "height": 20,
+                  "fill": "$color-icon-default"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "gH6dV",
+          "type": "ref",
+          "ref": "hqODY",
+          "name": "장소 등록 Top Navigation",
+          "width": "fill_container",
+          "descendants": {
+            "cJ4N4": {
+              "content": "장소 등록"
+            },
+            "w4xXkP": {
+              "enabled": false
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "AoMKQ",
+          "name": "장소 등록 콘텐츠",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": "$spacing-16",
+          "padding": [
+            "$spacing-16",
+            0,
+            "$spacing-24",
+            0
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "rCt88",
+              "type": "ref",
+              "ref": "mwnkn",
+              "name": "장소 검색 Focused TextField",
+              "width": 328,
+              "descendants": {
+                "HQNrh": {
+                  "content": "장소 검색"
+                },
+                "n8mq6": {
+                  "id": "K74HF2",
+                  "type": "ref",
+                  "ref": "hJLGs",
+                  "name": "검색 아이콘",
+                  "width": 20,
+                  "height": 20,
+                  "fill": "$color-icon-default"
+                },
+                "BExMB": {
+                  "content": "서울숲 없는가게"
+                },
+                "yaqAO": {
+                  "enabled": false
+                },
+                "dAQ1J": {
+                  "content": "검색 결과가 없어요"
+                }
+              }
+            },
+            {
+              "id": "itwBM",
+              "type": "ref",
+              "ref": "H6UdCv",
+              "name": "장소 검색 결과 없음 Empty",
+              "width": 328,
+              "descendants": {
+                "t8shV7": {
+                  "id": "Tgx9Q",
+                  "type": "ref",
+                  "ref": "xDG6x",
+                  "name": "검색 결과 없음 아이콘",
+                  "width": 32,
+                  "height": 32,
+                  "fill": "$color-icon-muted"
+                },
+                "GcJ0a": {
+                  "content": "검색 결과가 없어요"
+                },
+                "i0RmAz": {
+                  "content": "네이버 장소 검색에서 찾지 못했어요. 장소명만 직접 입력해 등록할 수 있어요.",
+                  "textGrowth": "fixed-width",
+                  "width": 280,
+                  "textAlign": "center"
+                },
+                "SWi36": {
+                  "enabled": false,
+                  "width": 168
+                }
+              }
+            },
+            {
+              "id": "dm3Uo",
+              "type": "ref",
+              "ref": "j7VLh",
+              "name": "주소 생략 안내 Toast",
+              "width": 328,
+              "descendants": {
+                "kWpZb": {
+                  "content": "직접 입력 시 주소 정보는 저장하지 않아요."
+                },
+                "Ja0gY": {
+                  "enabled": false
+                }
+              }
+            },
+            {
+              "id": "IXzds",
+              "type": "ref",
+              "ref": "mwnkn",
+              "name": "장소명 직접 입력 Focused TextField",
+              "width": 328,
+              "descendants": {
+                "HQNrh": {
+                  "content": "장소명 직접 입력"
+                },
+                "n8mq6": {
+                  "enabled": false
+                },
+                "BExMB": {
+                  "content": "서울숲 없는가게"
+                },
+                "yaqAO": {
+                  "enabled": false
+                },
+                "dAQ1J": {
+                  "content": "주소 없이 장소명만 저장돼요"
+                }
+              }
+            },
+            {
+              "id": "XU4O4",
+              "type": "ref",
+              "ref": "u8QYqM",
+              "name": "장소명으로 등록하기 Primary Button",
+              "width": 328,
+              "descendants": {
+                "awFiz": {
+                  "enabled": false
+                },
+                "rCnmy": {
+                  "content": "장소명으로 등록하기"
+                },
+                "ujax6": {
+                  "enabled": false
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "iTrsl",
+      "x": 6160,
+      "y": 0,
+      "name": "숨은맛집 · 상세 미니 지도",
+      "clip": true,
+      "width": 360,
+      "fill": "$color-background-default",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "XuqbY",
+          "name": "상세 상태 표시줄",
+          "width": "fill_container",
+          "height": 62,
+          "padding": [
+            0,
+            "$spacing-20"
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "iR9jl",
+              "type": "ref",
+              "ref": "rA4ir",
+              "name": "상세 현재 시간",
+              "content": "9:41",
+              "fill": "$color-text-default"
+            },
+            {
+              "type": "frame",
+              "id": "h7JKR",
+              "name": "상세 시스템 아이콘",
+              "gap": "$spacing-8",
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "d9CERm",
+                  "type": "ref",
+                  "ref": "y6mY2m",
+                  "name": "상세 상태 신호 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "hcHMg",
+                  "type": "ref",
+                  "ref": "qohVE",
+                  "name": "상세 상태 연결 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "jvILT",
+                  "type": "ref",
+                  "ref": "o7lslP",
+                  "name": "상세 상태 배터리 아이콘",
+                  "width": 20,
+                  "height": 20,
+                  "fill": "$color-icon-default"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "R8tPL",
+          "type": "ref",
+          "ref": "hqODY",
+          "name": "상세 Top Navigation",
+          "width": "fill_container",
+          "descendants": {
+            "cJ4N4": {
+              "content": "맛집 이야기"
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "a0ELnL",
+          "name": "상세 사진 영역",
+          "clip": true,
+          "width": "fill_container",
+          "height": 278,
+          "layout": "none",
+          "children": [
+            {
+              "type": "rectangle",
+              "id": "fqYUB",
+              "x": 0,
+              "y": 0,
+              "name": "산마루 들깨칼국수 상세 사진",
+              "metadata": {
+                "type": "unsplash",
+                "username": "brenoburnett",
+                "link": "https://unsplash.com/@brenoburnett",
+                "author": "Breno Burnett"
+              },
+              "fill": {
+                "type": "image",
+                "enabled": true,
+                "url": "https://images.unsplash.com/photo-1780982907293-ace5c3edd918?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU0MjgxNzN8&ixlib=rb-4.1.0&q=80&w=1080",
+                "mode": "fill"
+              },
+              "width": 360,
+              "height": 278
+            },
+            {
+              "type": "frame",
+              "id": "uqbLK",
+              "x": 290,
+              "y": 230,
+              "name": "사진 순서",
+              "width": 50,
+              "height": 28,
+              "fill": "$color-background-overlay",
+              "cornerRadius": 9999,
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "XcQl7",
+                  "type": "ref",
+                  "ref": "rA4ir",
+                  "name": "사진 순서 글자",
+                  "content": "1 / 3",
+                  "fill": "$color-text-on-inverse"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "r3coXC",
+          "name": "상세 콘텐츠",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": "$spacing-24",
+          "padding": [
+            "$spacing-24",
+            "$spacing-16"
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "A4wg1",
+              "name": "맛집 제목 정보",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": "$spacing-12",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "L1Zh2",
+                  "name": "상세 태그 행",
+                  "gap": "$spacing-8",
+                  "children": [
+                    {
+                      "id": "GMDzO",
+                      "type": "ref",
+                      "ref": "GIPgm",
+                      "name": "주차 가능 Badge",
+                      "descendants": {
+                        "vfv3I": {
+                          "content": "주차 가능"
+                        }
+                      }
+                    },
+                    {
+                      "id": "NprEE",
+                      "type": "ref",
+                      "ref": "yoAvI",
+                      "name": "아이와 함께 Badge",
+                      "descendants": {
+                        "PMss2": {
+                          "content": "아이와 함께"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "ba804",
+                  "type": "ref",
+                  "ref": "suDJH",
+                  "name": "상세 맛집 이름",
+                  "content": "산마루 들깨칼국수",
+                  "fill": "$color-text-default"
+                },
+                {
+                  "type": "frame",
+                  "id": "Tww72",
+                  "name": "작성자 정보",
+                  "gap": "$spacing-8",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "OHhik",
+                      "name": "작성자 아바타",
+                      "width": 28,
+                      "height": 28,
+                      "fill": "$color-background-neutral-soft",
+                      "cornerRadius": 9999,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "id": "YivEa",
+                          "type": "ref",
+                          "ref": "HaG2S",
+                          "name": "작성자 사용자 아이콘",
+                          "width": 16,
+                          "height": 16,
+                          "fill": "$color-icon-secondary"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "NlpmO",
+                      "type": "ref",
+                      "ref": "O7fbW",
+                      "name": "작성자 글자",
+                      "content": "주말드라이버 · 3일 전",
+                      "fill": "$color-text-secondary"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "a5lRDX",
+              "name": "방문 이야기",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": "$spacing-8",
+              "children": [
+                {
+                  "id": "DYvGb",
+                  "type": "ref",
+                  "ref": "b1zHzO",
+                  "name": "이야기 제목",
+                  "content": "여기, 이런 곳이에요",
+                  "fill": "$color-text-default"
+                },
+                {
+                  "id": "iIPpY",
+                  "type": "ref",
+                  "ref": "PzihL",
+                  "name": "맛집 상세 설명",
+                  "content": "광명 외곽길을 따라가다 만나는 조용한 칼국수집이에요. 직접 빻은 들깨라 국물이 고소하고, 김치도 매일 담근대요.\n\n가게 앞 주차 공간이 넉넉해서 부모님과 함께 오기 좋았습니다. 점심 12시 전엔 기다림도 거의 없었어요.",
+                  "fill": "$color-text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container"
+                }
+              ]
+            },
+            {
+              "id": "ZtccM",
+              "type": "ref",
+              "ref": "TQunc",
+              "name": "방문 팁 Card",
+              "width": "fill_container",
+              "descendants": {
+                "juKRT": {
+                  "enabled": false
+                },
+                "O1C5rq": {
+                  "gap": "$spacing-8",
+                  "padding": "$spacing-16"
+                },
+                "HU5lB": {
+                  "content": "작성자의 한 줄 팁"
+                },
+                "qga7j": {
+                  "content": "들깨칼국수엔 바삭한 감자전 필수!"
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "oRvWR",
+              "name": "위치 정보",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": "$spacing-12",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "r1COu",
+                  "name": "위치 제목 행",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "M6V4d",
+                      "type": "ref",
+                      "ref": "b1zHzO",
+                      "name": "위치 제목",
+                      "content": "위치",
+                      "fill": "$color-text-default"
+                    },
+                    {
+                      "id": "E8gcx2",
+                      "type": "ref",
+                      "ref": "enuoG",
+                      "name": "주소 복사 Secondary Button",
+                      "descendants": {
+                        "a4fFfq": {
+                          "id": "N0LXlh",
+                          "type": "ref",
+                          "ref": "J86pbT",
+                          "name": "주소 복사 아이콘",
+                          "width": 16,
+                          "height": 16,
+                          "fill": "$color-icon-on-inverse"
+                        },
+                        "m2y6gN": {
+                          "content": "주소 복사"
+                        },
+                        "Nrnlo": {
+                          "enabled": false
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "xiZJe",
+                  "type": "ref",
+                  "ref": "PzihL",
+                  "name": "상세 주소",
+                  "content": "경기 광명시 가학로 88 산마루 1층",
+                  "fill": "$color-text-secondary",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container"
+                },
+                {
+                  "type": "frame",
+                  "id": "Y9oWyJ",
+                  "name": "네이버 맛집 지도",
+                  "clip": true,
+                  "width": "fill_container",
+                  "height": 190,
+                  "fill": {
+                    "type": "image",
+                    "enabled": true,
+                    "url": "public/images/naver-map-gwangmyeong-gahak.png",
+                    "mode": "fill"
+                  },
+                  "cornerRadius": 16,
+                  "layout": "none"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "R8HJe4",
+          "name": "상세 하단 액션",
+          "width": "fill_container",
+          "layout": "vertical",
+          "padding": [
+            0,
+            "$spacing-16",
+            "$spacing-16",
+            "$spacing-16"
+          ],
+          "children": [
+            {
+              "id": "wI6B8",
+              "type": "ref",
+              "ref": "u8QYqM",
+              "name": "길찾기 Primary Button",
+              "width": "fill_container",
+              "descendants": {
+                "awFiz": {
+                  "id": "Z34yMZ",
+                  "type": "ref",
+                  "ref": "LKKY6",
+                  "name": "길찾기 화살표 아이콘",
+                  "width": 20,
+                  "height": 20,
+                  "fill": "$color-icon-on-brand"
+                },
+                "rCnmy": {
+                  "content": "지도에서 길찾기"
+                },
+                "ujax6": {
+                  "enabled": false
                 }
               }
             }

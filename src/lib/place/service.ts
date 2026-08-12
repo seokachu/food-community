@@ -6,13 +6,17 @@ import { PLACE_IMAGE_BUCKET, publicStorageUrl } from "@/lib/supabase/storage";
 
 /** 목록·상세·등록·수정 응답이 같은 모양을 쓰도록 select 를 하나로 고정한다. */
 export const PLACE_SELECT =
-  "id, title, content, address, created_at, user_id, place_image(id, image_path)";
+  "id, title, content, address, name, lat, lng, created_at, user_id, place_image(id, image_path)";
 
 export interface PlaceRow {
   id: number;
   title: string;
   content: string;
   address: string;
+  /** 장소명·좌표. 지도 연동 전에 등록된 옛 글에는 없어 null 일 수 있다. */
+  name: string | null;
+  lat: number | null;
+  lng: number | null;
   created_at: string;
   user_id: string;
   place_image: { id: string; image_path: string }[];
@@ -24,6 +28,10 @@ export interface PlaceView {
   title: string;
   content: string;
   address: string;
+  /** 장소명·좌표. 지도 연동 전에 등록된 옛 글에는 없어 null 일 수 있다. */
+  name: string | null;
+  lat: number | null;
+  lng: number | null;
   createdAt: string;
   userId: string;
   images: { id: string; url: string }[];
@@ -35,6 +43,9 @@ export function toPlaceView(row: PlaceRow): PlaceView {
     title: row.title,
     content: row.content,
     address: row.address,
+    name: row.name,
+    lat: row.lat,
+    lng: row.lng,
     createdAt: row.created_at,
     userId: row.user_id,
     images: row.place_image.map((image) => ({
@@ -44,7 +55,10 @@ export function toPlaceView(row: PlaceRow): PlaceView {
   };
 }
 
-/** 이미지 포함 place 한 건. 없거나 조회에 실패하면 null(실패는 로그로 남긴다). */
+/**
+ * 이미지 포함 place 한 건. 없거나 조회에 실패하면 null(실패는 로그로 남긴다).
+ * 소프트삭제된 글은 없는 글과 똑같이 취급한다.
+ */
 export async function getPlaceRow(
   supabase: SupabaseServerClient,
   id: number,
@@ -53,11 +67,32 @@ export async function getPlaceRow(
     .from("place")
     .select(PLACE_SELECT)
     .eq("id", id)
+    .is("deleted_at", null)
     .order("created_at", { referencedTable: "place_image", ascending: true })
     .maybeSingle();
 
   if (error) {
     console.error("[place] 조회 실패", { id, error });
+    return null;
+  }
+  return data;
+}
+
+/** 특정 사용자가 쓴 글 목록(최신순, 소프트삭제 제외). 실패하면 null. */
+export async function getUserPlaceRows(
+  supabase: SupabaseServerClient,
+  userId: string,
+): Promise<PlaceRow[] | null> {
+  const { data, error } = await supabase
+    .from("place")
+    .select(PLACE_SELECT)
+    .eq("user_id", userId)
+    .is("deleted_at", null)
+    .order("created_at", { ascending: false })
+    .order("created_at", { referencedTable: "place_image", ascending: true });
+
+  if (error) {
+    console.error("[place] 내 글 목록 조회 실패", { userId, error });
     return null;
   }
   return data;

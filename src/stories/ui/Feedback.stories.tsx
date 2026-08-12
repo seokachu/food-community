@@ -85,6 +85,13 @@ export const Empty: Story = {
         actions={<Button leftIcon="plus">첫 맛집 등록하기</Button>}
         className="border-border-default rounded-2xl border"
       />
+      {/* 장소 검색 결과 없음. 액션 없이 아이콘만 muted 로 누른다. */}
+      <EmptyState
+        icon="search"
+        iconTone="muted"
+        title="검색 결과가 없어요"
+        description="네이버 장소 검색에서 찾지 못했어요. 장소명만 직접 입력해 등록할 수 있어요."
+      />
     </div>
   ),
 };

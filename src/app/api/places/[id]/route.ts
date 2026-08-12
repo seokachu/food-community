@@ -1,9 +1,11 @@
 import { NextResponse } from "next/server";
 
 import {
+  parsePlaceId,
   PLACE_IMAGE_MIN_COUNT,
   validatePlaceContent,
   validatePlaceImages,
+  validatePlaceLocation,
   validatePlaceTitle,
 } from "@/lib/place-rules";
 import {
@@ -13,13 +15,6 @@ import {
   uploadPlaceImages,
 } from "@/lib/place/service";
 import { createClient } from "@/lib/supabase/server";
-
-/** place.id 는 bigint. 숫자가 아니면 조회 자체가 에러라 먼저 거른다. */
-function parsePlaceId(raw: string): number | null {
-  if (!/^\d+$/.test(raw)) return null;
-  const id = Number(raw);
-  return Number.isSafeInteger(id) && id > 0 ? id : null;
-}
 
 /** GET /api/places/[id] — 맛집 상세. 비로그인 포함 공개. */
 export async function GET(
@@ -54,7 +49,8 @@ export async function GET(
 
 /**
  * PATCH /api/places/[id] — 맛집 수정. multipart form-data:
- * `title`(필수) · `content`(필수, 10글자 이상)
+ * `title`(필수) · `content`(필수, 10글자 이상) ·
+ * `name`·`address`·`lat`·`lng`(지도 정보, 모두 필수 — 하나라도 없으면 400) ·
  * `images`(추가할 파일, 선택) · `removeImageIds`(지울 place_image.id, 선택·반복)
  * 수정 후에도 이미지는 1장 이상 남아 있어야 한다.
  */
@@ -123,6 +119,19 @@ export async function PATCH(
       );
     }
 
+    const location = validatePlaceLocation({
+      name: form.get("name"),
+      address: form.get("address"),
+      lat: form.get("lat"),
+      lng: form.get("lng"),
+    });
+    if (!location.ok) {
+      return NextResponse.json(
+        { ok: false, error: location.message },
+        { status: 400 },
+      );
+    }
+
     // 추가분은 개수 하한 없이 형식·용량만 검사한다. 하한은 아래 최종 개수로 판단.
     const newFiles = form
       .getAll("images")
@@ -168,7 +177,14 @@ export async function PATCH(
 
     const { error: updateError } = await supabase
       .from("place")
-      .update({ title: title.value, content: content.value })
+      .update({
+        title: title.value,
+        content: content.value,
+        address: location.value.address,
+        name: location.value.name,
+        lat: location.value.lat,
+        lng: location.value.lng,
+      })
       .eq("id", id);
 
     if (updateError) {
@@ -223,6 +239,73 @@ export async function PATCH(
       ok: true,
       place: updated ? toPlaceView(updated) : null,
     });
+  } catch (reason) {
+    const message = reason instanceof Error ? reason.message : "Unexpected error";
+    return NextResponse.json({ ok: false, error: message }, { status: 500 });
+  }
+}
+
+/**
+ * DELETE /api/places/[id] — 맛집 소프트삭제. 행을 지우지 않고 deleted_at 만
+ * 기록한다. 이후 목록·상세 조회에서 제외되며, 이미지 파일·행도 복구를 위해
+ * 그대로 남긴다. 이미 삭제된 글은 404 로 답해 두 번 지워지지 않는다.
+ */
+export async function DELETE(
+  _request: Request,
+  { params }: { params: Promise<{ id: string }> },
+) {
+  try {
+    const supabase = await createClient();
+    const { data } = await supabase.auth.getClaims();
+    const claims = data?.claims;
+
+    if (!claims) {
+      return NextResponse.json(
+        { ok: false, error: "로그인이 필요합니다" },
+        { status: 401 },
+      );
+    }
+    const userId = claims.sub as string;
+
+    const { id: rawId } = await params;
+    const id = parsePlaceId(rawId);
+    if (id === null) {
+      return NextResponse.json(
+        { ok: false, error: "잘못된 맛집 주소입니다" },
+        { status: 400 },
+      );
+    }
+
+    const existing = await getPlaceRow(supabase, id);
+    if (!existing) {
+      return NextResponse.json(
+        { ok: false, error: "맛집을 찾을 수 없습니다" },
+        { status: 404 },
+      );
+    }
+    // RLS 가 어차피 막지만, 그때는 0행 갱신으로 조용히 끝나므로 여기서 상태코드를 준다.
+    if (existing.user_id !== userId) {
+      return NextResponse.json(
+        { ok: false, error: "본인이 등록한 맛집만 삭제할 수 있습니다" },
+        { status: 403 },
+      );
+    }
+
+    const { error: deleteError } = await supabase
+      .from("place")
+      .update({ deleted_at: new Date().toISOString() })
+      .eq("id", id)
+      .is("deleted_at", null);
+
+    if (deleteError) {
+      console.error("[place] 삭제 실패", { id, userId, deleteError });
+      return NextResponse.json(
+        { ok: false, error: "맛집 삭제에 실패했습니다" },
+        { status: 500 },
+      );
+    }
+
+    return NextResponse.json({ ok: true });
   } catch (reason) {
     const message = reason instanceof Error ? reason.message : "Unexpected error";
     return NextResponse.json({ ok: false, error: message }, { status: 500 });

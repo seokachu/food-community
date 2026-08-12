@@ -15,7 +15,7 @@ type Story = StoryObj<typeof Icon>;
 
 const registry: Record<string, string> = iconRegistry;
 
-/** design.pen 의 Icon 컴포넌트 144개(36종 × 4사이즈)와 1:1 대응한다. */
+/** design.pen 의 Icon 컴포넌트 144개(36종 × 4사이즈) + 코드에서 추가한 map-pin. */
 export const Gallery: Story = {
   render: () => (
     <div className="flex flex-col gap-6 bg-background-default p-8">

@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
 
 import {
-  PLACE_ADDRESS_PENDING,
   validatePlaceContent,
   validatePlaceImages,
+  validatePlaceLocation,
   validatePlaceTitle,
 } from "@/lib/place-rules";
 import {
@@ -22,6 +22,7 @@ export async function GET() {
     const { data, error } = await supabase
       .from("place")
       .select(PLACE_SELECT)
+      .is("deleted_at", null)
       .order("created_at", { ascending: false })
       .order("created_at", { referencedTable: "place_image", ascending: true });
 
@@ -42,8 +43,8 @@ export async function GET() {
 
 /**
  * POST /api/places — 맛집 등록. multipart form-data:
- * `title`(필수) · `content`(필수, 10글자 이상) · `images`(파일 1장 이상).
- * 주소 입력은 다음 단계라 "등록 대기중" 으로 자동 저장한다.
+ * `title`(필수) · `content`(필수, 10글자 이상) · `images`(파일 1장 이상) ·
+ * `name`·`address`·`lat`·`lng`(지도 정보, 모두 필수 — 하나라도 없으면 400).
  */
 export async function POST(request: Request) {
   try {
@@ -83,6 +84,19 @@ export async function POST(request: Request) {
       );
     }
 
+    const location = validatePlaceLocation({
+      name: form.get("name"),
+      address: form.get("address"),
+      lat: form.get("lat"),
+      lng: form.get("lng"),
+    });
+    if (!location.ok) {
+      return NextResponse.json(
+        { ok: false, error: location.message },
+        { status: 400 },
+      );
+    }
+
     const files = form
       .getAll("images")
       .filter((entry): entry is File => entry instanceof File && entry.size > 0);
@@ -107,7 +121,10 @@ export async function POST(request: Request) {
       .insert({
         title: title.value,
         content: content.value,
-        address: PLACE_ADDRESS_PENDING,
+        address: location.value.address,
+        name: location.value.name,
+        lat: location.value.lat,
+        lng: location.value.lng,
         user_id: userId,
       })
       .select("id")

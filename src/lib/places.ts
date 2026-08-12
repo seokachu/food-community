@@ -26,6 +26,8 @@ export interface Place {
   story: string[];
   tip: string;
   address: string;
+  /** 상세 위치 블록의 지도 캡처. 없으면 도형 자리표시자(MapPreview located)를 쓴다. */
+  mapImage?: string;
   mapCaption: string;
   /** 마이페이지 `내가 쓴 글` 카드에 쓰는 작성일. */
   writtenOn: string;
@@ -52,6 +54,7 @@ export const PLACES: Place[] = [
     ],
     tip: "들깨칼국수엔 바삭한 감자전 필수!",
     address: "경기 광명시 가학로 88 산마루 1층",
+    mapImage: "/images/naver-map-gwangmyeong-gahak.png",
     mapCaption: "광명동 · 가학산 입구",
     writtenOn: "2026.08.01",
   },

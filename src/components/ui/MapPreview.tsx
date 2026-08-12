@@ -2,15 +2,21 @@ import { Icon } from "@/components/foundation/Icon";
 import { cn } from "@/lib/cn";
 
 /**
- * 시안의 지도 영역 두 가지를 한 컴포넌트로 묶었다.
+ * 시안의 지도 영역 세 가지를 한 컴포넌트로 묶었다.
  *
- * - `located`: 상세 화면. 브랜드 틴트 배경 위에 녹지·도로 도형과 핀, 하단에 지역명.
- * - `empty`: 등록 화면. 주소를 아직 고르지 않은 비활성 상태.
+ * - `image`: 실제 지도 캡처 이미지. 상세 위치 블록과 장소 선택 화면이 쓴다.
+ * - `located`: 브랜드 틴트 배경 위에 녹지·도로 도형과 핀, 하단에 지역명.
+ *   캡처 이미지가 없는 데이터의 폴백이다.
+ * - `empty`: 등록 화면. 장소를 아직 고르지 않은 비활성 상태.
  *
  * 실제 지도 SDK 가 붙기 전까지 쓰는 자리표시자다. 도형은 전부 장식이라 aria 에서 감춘다.
  */
 export interface MapPreviewProps {
-  variant?: "located" | "empty";
+  variant?: "located" | "empty" | "image";
+  /** image 일 때 보여줄 지도 캡처. CardMedia 처럼 높이·라운드는 className 으로 정한다. */
+  src?: string;
+  /** image 일 때의 접근성 이름. */
+  alt?: string;
   /** located 일 때 하단에 표시할 지역명. */
   caption?: string;
   /** empty 일 때 가운데에 표시할 안내 문구. */
@@ -20,10 +26,28 @@ export interface MapPreviewProps {
 
 export function MapPreview({
   variant = "located",
+  src,
+  alt = "",
   caption,
-  emptyText = "주소를 선택하면 위치가 표시돼요",
+  emptyText = "장소를 선택하면 위치가 표시돼요",
   className,
 }: MapPreviewProps) {
+  if (variant === "image") {
+    return (
+      <div
+        role={alt ? "img" : undefined}
+        aria-label={alt || undefined}
+        aria-hidden={alt ? undefined : true}
+        style={{ backgroundImage: src ? `url(${src})` : undefined }}
+        className={cn(
+          // 폭을 고정하지 않아야 등록 화면의 음수 마진(full-bleed)이 성립한다.
+          "bg-background-subtle bg-cover bg-center",
+          className,
+        )}
+      />
+    );
+  }
+
   if (variant === "empty") {
     return (
       <div
@@ -32,7 +56,8 @@ export function MapPreview({
           className,
         )}
       >
-        <span className="bg-background-neutral-soft flex size-10 items-center justify-center rounded-full">
+        {/* 시안 실측 42px. */}
+        <span className="bg-background-neutral-soft flex size-10.5 items-center justify-center rounded-full">
           <Icon name="image" size={24} className="text-icon-muted" />
         </span>
         <p className="text-label-md text-text-muted">{emptyText}</p>

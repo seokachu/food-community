@@ -22,6 +22,7 @@ import {
   Image as ImageIcon,
   Info,
   LogOut,
+  MapPin,
   Menu,
   MessageCircle,
   Pencil,
@@ -42,6 +43,7 @@ import {
  * design.pen 의 `Icon/<name>/<size>` 컴포넌트 144개(36종 x 4사이즈)에 대응한다.
  * 키는 디자인 시스템의 시맨틱 이름, 값은 그 이름이 실제로 렌더하는 lucide 아이콘이다.
  * 둘은 일치하지 않는 경우가 많다 (close -> x, delete -> trash-2, error -> circle-x ...).
+ * map-pin 은 시안에 없지만 네이버 지도 연동(중심 고정 핀)을 위해 코드에서 추가했다.
  */
 export const iconMap = {
   "arrow-left": ArrowLeft,
@@ -80,6 +82,7 @@ export const iconMap = {
   star: Star,
   comment: MessageCircle,
   image: ImageIcon,
+  "map-pin": MapPin,
 } satisfies Record<string, LucideIcon>;
 
 export type IconName = keyof typeof iconMap;

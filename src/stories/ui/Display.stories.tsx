@@ -11,6 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/Card";
 import { MapPreview } from "@/components/ui/MapPreview";
+import { NaverMap } from "@/components/ui/NaverMap";
 
 const meta = {
   title: "UI/Display",
@@ -127,13 +128,70 @@ export const BrandMarks: Story = {
   ),
 };
 
-/** 지도 SDK 가 붙기 전까지 쓰는 자리표시자. 상세(located)와 등록(empty) 두 가지다. */
+/**
+ * 지도 SDK 가 붙기 전까지 쓰는 자리표시자.
+ * 실제 캡처(image) · 도형 폴백(located) · 등록 비활성(empty) 세 가지다.
+ */
 export const Maps: Story = {
   args: { children: null },
   render: () => (
     <div className="bg-background-default grid gap-6 p-6 sm:grid-cols-2">
+      <MapPreview
+        variant="image"
+        src="/images/naver-map-gwangmyeong-gahak.png"
+        alt="산마루 들깨칼국수 위치 지도"
+        className="h-[190px] rounded-2xl"
+      />
       <MapPreview caption="광명동 · 가학산 입구" />
       <MapPreview variant="empty" />
+    </div>
+  ),
+};
+
+/**
+ * 실제 네이버 지도(장소 선택 화면). 핀은 중심에 고정되고 지도를 움직여 맞춘다.
+ * 스토리북엔 서버 환경변수가 없어 기본으로 키 미설정 폴백이 보인다.
+ * 실지도를 확인하려면 STORYBOOK_NAVER_MAP_CLIENT_ID 를 넣고 다시 시작한다.
+ * 오른쪽은 키가 없을 때의 폴백 상태를 일부러 보여주는 예시다.
+ */
+export const NaverMaps: Story = {
+  args: { children: null },
+  render: () => (
+    <div className="bg-background-default grid gap-6 p-6 sm:grid-cols-2">
+      <NaverMap
+        clientId={process.env.STORYBOOK_NAVER_MAP_CLIENT_ID ?? ""}
+        className="h-[320px] rounded-2xl"
+      />
+      <NaverMap clientId="" className="h-[320px] rounded-2xl" />
+    </div>
+  ),
+};
+
+/**
+ * 저장된 장소를 보여주는 조회용 지도. 중심 핀 대신 좌표에 고정된 마커를 쓴다.
+ * 왼쪽은 상세 위치 블록(조작 가능), 오른쪽은 등록 폼 미리보기(조작 불가) 용례다.
+ */
+export const NaverMapMarkers: Story = {
+  args: { children: null },
+  render: () => (
+    <div className="bg-background-default grid gap-6 p-6 sm:grid-cols-2">
+      <NaverMap
+        clientId={process.env.STORYBOOK_NAVER_MAP_CLIENT_ID ?? ""}
+        center={{ lat: 37.5666103, lng: 126.9783882 }}
+        marker={{ lat: 37.5666103, lng: 126.9783882 }}
+        centerPin={false}
+        zoom={16}
+        className="h-[190px] rounded-2xl"
+      />
+      <NaverMap
+        clientId={process.env.STORYBOOK_NAVER_MAP_CLIENT_ID ?? ""}
+        center={{ lat: 37.5666103, lng: 126.9783882 }}
+        marker={{ lat: 37.5666103, lng: 126.9783882 }}
+        centerPin={false}
+        interactive={false}
+        zoom={16}
+        className="h-[146px] rounded-2xl"
+      />
     </div>
   ),
 };

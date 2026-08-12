@@ -5,21 +5,15 @@ import { AppShell } from "@/components/layout/AppShell";
 import { Container } from "@/components/layout/Container";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import {
-  Card,
-  CardBody,
-  CardDescription,
-  CardMedia,
-  CardTitle,
-} from "@/components/ui/Card";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { IconButton } from "@/components/ui/IconButton";
 import { TopNavigation } from "@/components/ui/TopNavigation";
 import { signOut } from "@/lib/auth/actions";
 import { avatarUrlOf, getProfile, toProfileView } from "@/lib/auth/profile";
-import { getPlace, MY_POST_IDS } from "@/lib/places";
+import { getUserPlaceRows, toPlaceView } from "@/lib/place/service";
 import { createClient } from "@/lib/supabase/server";
 
+import { MyPostList } from "./MyPostList";
 import { ProfileSection } from "./ProfileSection";
 
 export const metadata = {
@@ -27,8 +21,13 @@ export const metadata = {
   description: "내가 남긴 숨은 맛집 이야기를 모아봅니다.",
 };
 
-/** 시안의 `12개` 배지. 실제 작성 글 수는 목록보다 많다는 설정이다. */
-const TOTAL_POST_COUNT = 12;
+/** 카드 작성일 표기. 시안 형식(2026.08.01)에 맞춘다. */
+function formatWrittenOn(iso: string) {
+  const date = new Date(iso);
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${date.getFullYear()}.${month}.${day}`;
+}
 
 export default async function MyPage() {
   const supabase = await createClient();
@@ -50,7 +49,14 @@ export default async function MyPage() {
       user_metadata: claims.user_metadata as Record<string, unknown> | null,
     });
 
-  const posts = MY_POST_IDS.map((id) => getPlace(id)!);
+  // 내가 쓴 글 — 소프트삭제 제외 최신순. 실패(null)와 빈 목록을 구분해 보여준다.
+  const rows = await getUserPlaceRows(supabase, userId);
+  const posts = (rows ?? []).map(toPlaceView).map((place) => ({
+    id: place.id,
+    title: place.title,
+    meta: `${formatWrittenOn(place.createdAt)} · ${place.address.split(" ").slice(0, 3).join(" ")}`,
+    thumbnailUrl: place.images[0]?.url,
+  }));
 
   return (
     <AppShell
@@ -69,29 +75,18 @@ export default async function MyPage() {
         <section className="flex flex-col gap-3">
           <header className="flex items-center justify-between gap-4">
             <h2 className="text-heading-md text-text-default">내가 쓴 글</h2>
-            <Badge>{posts.length ? TOTAL_POST_COUNT : 0}개</Badge>
+            <Badge>{posts.length}개</Badge>
           </header>
 
-          {posts.length ? (
-            <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
-              {posts.map((place) => (
-                <li key={place.id} className="flex">
-                  <Card as={Link} href={`/places/${place.id}`} className="w-full">
-                    <CardMedia
-                      src={place.thumbnail}
-                      alt={place.name}
-                      className="h-26 sm:aspect-[16/9] sm:h-auto"
-                    />
-                    <CardBody className="p-3 sm:p-4">
-                      <CardTitle>{place.name}</CardTitle>
-                      <CardDescription>
-                        {place.writtenOn} · {place.address.split(" ").slice(0, 3).join(" ")}
-                      </CardDescription>
-                    </CardBody>
-                  </Card>
-                </li>
-              ))}
-            </ul>
+          {rows === null ? (
+            <EmptyState
+              icon="warning"
+              title="목록을 불러오지 못했어요"
+              description="잠시 후 새로고침 해주세요."
+              className="border-border-default rounded-2xl border"
+            />
+          ) : posts.length ? (
+            <MyPostList posts={posts} />
           ) : (
             // 시안의 `마이페이지 빈 상태`. 작성 글이 없으면 이 갈래로 떨어진다.
             <EmptyState

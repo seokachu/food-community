@@ -4,8 +4,8 @@
  */
 export const PLACE_CONTENT_MIN_LENGTH = 10;
 
-/** 주소 입력은 다음 단계에서 붙인다. 그전까지 등록되는 글에 자동 저장되는 값. */
-export const PLACE_ADDRESS_PENDING = "등록 대기중";
+export const PLACE_NAME_MAX_LENGTH = 80;
+export const PLACE_ADDRESS_MAX_LENGTH = 120;
 
 export const PLACE_IMAGE_MIN_COUNT = 1;
 export const PLACE_IMAGE_MAX_BYTES = 5 * 1024 * 1024;
@@ -20,6 +20,16 @@ export const PLACE_IMAGE_TYPES: Record<string, string> = {
 export const PLACE_IMAGE_ACCEPT = Object.keys(PLACE_IMAGE_TYPES).join(",");
 
 type Validation<T> = { ok: true; value: T } | { ok: false; message: string };
+
+/**
+ * URL 파라미터의 place.id(bigint) 파싱. 숫자 문자열만 유효한 id 로 보므로
+ * 목데이터의 문자열 id 와도 자연스럽게 구분된다.
+ */
+export function parsePlaceId(raw: string): number | null {
+  if (!/^\d+$/.test(raw)) return null;
+  const id = Number(raw);
+  return Number.isSafeInteger(id) && id > 0 ? id : null;
+}
 
 export function validatePlaceTitle(raw: unknown): Validation<string> {
   if (typeof raw !== "string" || !raw.trim()) {
@@ -40,6 +50,58 @@ export function validatePlaceContent(raw: unknown): Validation<string> {
     };
   }
   return { ok: true, value };
+}
+
+/** 지도 정보 묶음. 장소명·지번주소·좌표가 모두 있어야 등록·수정할 수 있다. */
+export interface PlaceLocation {
+  name: string;
+  address: string;
+  lat: number;
+  lng: number;
+}
+
+/** FormData 값(문자열)과 폼 상태(숫자)를 모두 받아 유효 범위의 좌표로만 통과시킨다. */
+function parseLocationCoord(raw: unknown, max: number): number | null {
+  const value =
+    typeof raw === "number"
+      ? raw
+      : typeof raw === "string" && raw.trim()
+        ? Number(raw)
+        : NaN;
+  return Number.isFinite(value) && Math.abs(value) <= max ? value : null;
+}
+
+/**
+ * 지도 정보(장소명·지번주소·좌표) 검사. 하나라도 비면 통과시키지 않는다.
+ * BFF 라우트(FormData)와 등록 폼(상태 값)이 같은 기준을 쓴다.
+ */
+export function validatePlaceLocation(raw: {
+  name: unknown;
+  address: unknown;
+  lat: unknown;
+  lng: unknown;
+}): Validation<PlaceLocation> {
+  const name = typeof raw.name === "string" ? raw.name.trim() : "";
+  const address = typeof raw.address === "string" ? raw.address.trim() : "";
+  const lat = parseLocationCoord(raw.lat, 90);
+  const lng = parseLocationCoord(raw.lng, 180);
+
+  if (!name || !address || lat === null || lng === null) {
+    return { ok: false, message: "지도에서 장소를 선택해주세요" };
+  }
+  if (name.length > PLACE_NAME_MAX_LENGTH) {
+    return {
+      ok: false,
+      message: `장소명은 ${PLACE_NAME_MAX_LENGTH}자 이내로 입력해주세요`,
+    };
+  }
+  if (address.length > PLACE_ADDRESS_MAX_LENGTH) {
+    return {
+      ok: false,
+      message: `주소는 ${PLACE_ADDRESS_MAX_LENGTH}자 이내로 입력해주세요`,
+    };
+  }
+  return { ok: true, value: { name, address, lat, lng } };
 }
 
 /**

@@ -19,7 +19,11 @@ export type Database = {
           address: string
           content: string
           created_at: string
+          deleted_at: string | null
           id: number
+          lat: number | null
+          lng: number | null
+          name: string | null
           title: string
           user_id: string
         }
@@ -27,7 +31,11 @@ export type Database = {
           address: string
           content: string
           created_at?: string
+          deleted_at?: string | null
           id?: number
+          lat?: number | null
+          lng?: number | null
+          name?: string | null
           title: string
           user_id: string
         }
@@ -35,7 +43,11 @@ export type Database = {
           address?: string
           content?: string
           created_at?: string
+          deleted_at?: string | null
           id?: number
+          lat?: number | null
+          lng?: number | null
+          name?: string | null
           title?: string
           user_id?: string
         }
