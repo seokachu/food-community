@@ -382,511 +382,6 @@
     },
     {
       "type": "frame",
-      "id": "bi8Zs",
-      "x": 1320,
-      "y": 0,
-      "name": "숨은맛집 · 상세",
-      "clip": true,
-      "width": 360,
-      "fill": "$color-background-default",
-      "layout": "vertical",
-      "children": [
-        {
-          "type": "frame",
-          "id": "ZUam9",
-          "name": "상세 상태 표시줄",
-          "width": "fill_container",
-          "height": 62,
-          "padding": [
-            0,
-            "$spacing-20"
-          ],
-          "justifyContent": "space_between",
-          "alignItems": "center",
-          "children": [
-            {
-              "id": "AW2ov",
-              "type": "ref",
-              "ref": "rA4ir",
-              "name": "상세 현재 시간",
-              "content": "9:41",
-              "fill": "$color-text-default"
-            },
-            {
-              "type": "frame",
-              "id": "AF4VI",
-              "name": "상세 시스템 아이콘",
-              "gap": "$spacing-8",
-              "alignItems": "center",
-              "children": [
-                {
-                  "id": "QOHqk",
-                  "type": "ref",
-                  "ref": "y6mY2m",
-                  "name": "상세 상태 신호 아이콘",
-                  "width": 16,
-                  "height": 16,
-                  "fill": "$color-icon-default"
-                },
-                {
-                  "id": "o2rnQg",
-                  "type": "ref",
-                  "ref": "qohVE",
-                  "name": "상세 상태 연결 아이콘",
-                  "width": 16,
-                  "height": 16,
-                  "fill": "$color-icon-default"
-                },
-                {
-                  "id": "cASom",
-                  "type": "ref",
-                  "ref": "o7lslP",
-                  "name": "상세 상태 배터리 아이콘",
-                  "width": 20,
-                  "height": 20,
-                  "fill": "$color-icon-default"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "id": "Me2tt",
-          "type": "ref",
-          "ref": "hqODY",
-          "name": "상세 Top Navigation",
-          "width": "fill_container",
-          "descendants": {
-            "cJ4N4": {
-              "content": "맛집 이야기"
-            }
-          }
-        },
-        {
-          "type": "frame",
-          "id": "MxX0A",
-          "name": "상세 사진 영역",
-          "clip": true,
-          "width": "fill_container",
-          "height": 278,
-          "layout": "none",
-          "children": [
-            {
-              "type": "rectangle",
-              "id": "pDEhg",
-              "x": 0,
-              "y": 0,
-              "name": "산마루 들깨칼국수 상세 사진",
-              "metadata": {
-                "type": "unsplash",
-                "username": "brenoburnett",
-                "link": "https://unsplash.com/@brenoburnett",
-                "author": "Breno Burnett"
-              },
-              "fill": {
-                "type": "image",
-                "enabled": true,
-                "url": "https://images.unsplash.com/photo-1780982907293-ace5c3edd918?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU0MjgxNzN8&ixlib=rb-4.1.0&q=80&w=1080",
-                "mode": "fill"
-              },
-              "width": 360,
-              "height": 278
-            },
-            {
-              "type": "frame",
-              "id": "s1OIRq",
-              "x": 290,
-              "y": 230,
-              "name": "사진 순서",
-              "width": 50,
-              "height": 28,
-              "fill": "$color-background-overlay",
-              "cornerRadius": 9999,
-              "justifyContent": "center",
-              "alignItems": "center",
-              "children": [
-                {
-                  "id": "zQ9o4",
-                  "type": "ref",
-                  "ref": "rA4ir",
-                  "name": "사진 순서 글자",
-                  "content": "1 / 3",
-                  "fill": "$color-text-on-inverse"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "LUA4b",
-          "name": "상세 콘텐츠",
-          "width": "fill_container",
-          "layout": "vertical",
-          "gap": "$spacing-24",
-          "padding": [
-            "$spacing-24",
-            "$spacing-16"
-          ],
-          "children": [
-            {
-              "type": "frame",
-              "id": "kRRUP",
-              "name": "맛집 제목 정보",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": "$spacing-12",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "P0uFDr",
-                  "name": "상세 태그 행",
-                  "gap": "$spacing-8",
-                  "children": [
-                    {
-                      "id": "LY8KS",
-                      "type": "ref",
-                      "ref": "GIPgm",
-                      "name": "주차 가능 Badge",
-                      "descendants": {
-                        "vfv3I": {
-                          "content": "주차 가능"
-                        }
-                      }
-                    },
-                    {
-                      "id": "IEp9E",
-                      "type": "ref",
-                      "ref": "yoAvI",
-                      "name": "아이와 함께 Badge",
-                      "descendants": {
-                        "PMss2": {
-                          "content": "아이와 함께"
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "id": "lVBEK",
-                  "type": "ref",
-                  "ref": "suDJH",
-                  "name": "상세 맛집 이름",
-                  "content": "산마루 들깨칼국수",
-                  "fill": "$color-text-default"
-                },
-                {
-                  "type": "frame",
-                  "id": "KM4gt",
-                  "name": "작성자 정보",
-                  "gap": "$spacing-8",
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "A3Dta",
-                      "name": "작성자 아바타",
-                      "width": 28,
-                      "height": 28,
-                      "fill": "$color-background-neutral-soft",
-                      "cornerRadius": 9999,
-                      "justifyContent": "center",
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "id": "ziQMC",
-                          "type": "ref",
-                          "ref": "HaG2S",
-                          "name": "작성자 사용자 아이콘",
-                          "width": 16,
-                          "height": 16,
-                          "fill": "$color-icon-secondary"
-                        }
-                      ]
-                    },
-                    {
-                      "id": "l5xOeI",
-                      "type": "ref",
-                      "ref": "O7fbW",
-                      "name": "작성자 글자",
-                      "content": "주말드라이버 · 3일 전",
-                      "fill": "$color-text-secondary"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "frame",
-              "id": "vz5Gt",
-              "name": "방문 이야기",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": "$spacing-8",
-              "children": [
-                {
-                  "id": "I0jfH2",
-                  "type": "ref",
-                  "ref": "b1zHzO",
-                  "name": "이야기 제목",
-                  "content": "여기, 이런 곳이에요",
-                  "fill": "$color-text-default"
-                },
-                {
-                  "id": "k0EP5x",
-                  "type": "ref",
-                  "ref": "PzihL",
-                  "name": "맛집 상세 설명",
-                  "content": "광명 외곽길을 따라가다 만나는 조용한 칼국수집이에요. 직접 빻은 들깨라 국물이 고소하고, 김치도 매일 담근대요.\n\n가게 앞 주차 공간이 넉넉해서 부모님과 함께 오기 좋았습니다. 점심 12시 전엔 기다림도 거의 없었어요.",
-                  "fill": "$color-text-secondary",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container"
-                }
-              ]
-            },
-            {
-              "id": "N06XKt",
-              "type": "ref",
-              "ref": "TQunc",
-              "name": "방문 팁 Card",
-              "width": "fill_container",
-              "descendants": {
-                "juKRT": {
-                  "enabled": false
-                },
-                "O1C5rq": {
-                  "gap": "$spacing-8",
-                  "padding": "$spacing-16"
-                },
-                "HU5lB": {
-                  "content": "작성자의 한 줄 팁"
-                },
-                "qga7j": {
-                  "content": "들깨칼국수엔 바삭한 감자전 필수!"
-                }
-              }
-            },
-            {
-              "type": "frame",
-              "id": "B8hcuN",
-              "name": "위치 정보",
-              "width": "fill_container",
-              "layout": "vertical",
-              "gap": "$spacing-12",
-              "children": [
-                {
-                  "type": "frame",
-                  "id": "C7dkW",
-                  "name": "위치 제목 행",
-                  "width": "fill_container",
-                  "justifyContent": "space_between",
-                  "alignItems": "center",
-                  "children": [
-                    {
-                      "id": "mZ7Vh",
-                      "type": "ref",
-                      "ref": "b1zHzO",
-                      "name": "위치 제목",
-                      "content": "위치",
-                      "fill": "$color-text-default"
-                    },
-                    {
-                      "id": "rF0cb",
-                      "type": "ref",
-                      "ref": "enuoG",
-                      "name": "주소 복사 Secondary Button",
-                      "descendants": {
-                        "a4fFfq": {
-                          "id": "y0wvRm",
-                          "type": "ref",
-                          "ref": "J86pbT",
-                          "name": "주소 복사 아이콘",
-                          "width": 16,
-                          "height": 16,
-                          "fill": "$color-icon-on-inverse"
-                        },
-                        "m2y6gN": {
-                          "content": "주소 복사"
-                        },
-                        "Nrnlo": {
-                          "enabled": false
-                        }
-                      }
-                    }
-                  ]
-                },
-                {
-                  "id": "TDXAh",
-                  "type": "ref",
-                  "ref": "PzihL",
-                  "name": "상세 주소",
-                  "content": "경기 광명시 가학로 88 산마루 1층",
-                  "fill": "$color-text-secondary",
-                  "textGrowth": "fixed-width",
-                  "width": "fill_container"
-                },
-                {
-                  "type": "frame",
-                  "id": "R1GwfA",
-                  "name": "맛집 지도",
-                  "clip": true,
-                  "width": "fill_container",
-                  "height": 190,
-                  "fill": "$color-background-map",
-                  "cornerRadius": 16,
-                  "layout": "none",
-                  "children": [
-                    {
-                      "type": "rectangle",
-                      "cornerRadius": 30,
-                      "id": "CaOv8",
-                      "x": 0,
-                      "y": 0,
-                      "name": "지도 녹지 1",
-                      "fill": "$color-background-map-accent",
-                      "width": 112,
-                      "height": 78
-                    },
-                    {
-                      "type": "rectangle",
-                      "cornerRadius": 34,
-                      "id": "wcp7g",
-                      "x": 246,
-                      "y": 120,
-                      "name": "지도 녹지 2",
-                      "fill": "$color-background-map-accent",
-                      "width": 76,
-                      "height": 68
-                    },
-                    {
-                      "type": "rectangle",
-                      "cornerRadius": 8,
-                      "id": "J8BNe",
-                      "x": 12,
-                      "y": 88,
-                      "name": "지도 큰길",
-                      "rotation": -4,
-                      "fill": "$color-background-map-road",
-                      "width": 300,
-                      "height": 16
-                    },
-                    {
-                      "type": "rectangle",
-                      "cornerRadius": 7,
-                      "id": "O6Glx",
-                      "x": 190,
-                      "y": 8,
-                      "name": "지도 세로길",
-                      "rotation": 8,
-                      "fill": "$color-background-map-road",
-                      "width": 13,
-                      "height": 170
-                    },
-                    {
-                      "type": "rectangle",
-                      "cornerRadius": 6,
-                      "id": "lSRuF",
-                      "x": 36,
-                      "y": 137,
-                      "name": "지도 작은길",
-                      "rotation": 4,
-                      "fill": "$color-background-map-road",
-                      "width": 270,
-                      "height": 8
-                    },
-                    {
-                      "type": "frame",
-                      "id": "zWitt",
-                      "x": 145,
-                      "y": 58,
-                      "name": "지도 핀",
-                      "width": 48,
-                      "height": 48,
-                      "fill": "$color-background-brand",
-                      "cornerRadius": 9999,
-                      "effect": {
-                        "type": "shadow",
-                        "shadowType": "outer",
-                        "color": "$color-shadow-strong",
-                        "offset": {
-                          "x": 0,
-                          "y": 4
-                        },
-                        "blur": 8
-                      },
-                      "justifyContent": "center",
-                      "alignItems": "center",
-                      "children": [
-                        {
-                          "id": "uzHs4",
-                          "type": "ref",
-                          "ref": "znyB7",
-                          "name": "지도 장소 아이콘",
-                          "width": 24,
-                          "height": 24,
-                          "fill": "$color-icon-on-brand"
-                        }
-                      ]
-                    },
-                    {
-                      "id": "Ku8UH",
-                      "type": "ref",
-                      "ref": "rA4ir",
-                      "name": "지도 지역명",
-                      "content": "광명동 · 가학산 입구",
-                      "fill": "$color-text-secondary",
-                      "x": 18,
-                      "y": 160
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "frame",
-          "id": "XlLfV",
-          "name": "상세 하단 액션",
-          "width": "fill_container",
-          "layout": "vertical",
-          "padding": [
-            0,
-            "$spacing-16",
-            "$spacing-16",
-            "$spacing-16"
-          ],
-          "children": [
-            {
-              "id": "D31IBO",
-              "type": "ref",
-              "ref": "u8QYqM",
-              "name": "길찾기 Primary Button",
-              "width": "fill_container",
-              "descendants": {
-                "awFiz": {
-                  "id": "Cy0p3",
-                  "type": "ref",
-                  "ref": "LKKY6",
-                  "name": "길찾기 화살표 아이콘",
-                  "width": 20,
-                  "height": 20,
-                  "fill": "$color-icon-on-brand"
-                },
-                "rCnmy": {
-                  "content": "지도에서 길찾기"
-                },
-                "ujax6": {
-                  "enabled": false
-                }
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "type": "frame",
       "id": "Dq0gd",
       "x": 1760,
       "y": 0,
@@ -31634,6 +31129,3969 @@
                 },
                 "ujax6": {
                   "enabled": false
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "nLwMf",
+      "x": 6600,
+      "y": 0,
+      "name": "숨은맛집 · 구독 결제",
+      "clip": true,
+      "width": 360,
+      "height": 844,
+      "fill": "$color-background-default",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "O5NHv0",
+          "name": "구독 결제 상태 표시줄",
+          "width": "fill_container",
+          "height": 62,
+          "padding": [
+            0,
+            "$spacing-20"
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "i32GOf",
+              "type": "ref",
+              "ref": "rA4ir",
+              "name": "현재 시간",
+              "content": "9:41",
+              "fill": "$color-text-default"
+            },
+            {
+              "type": "frame",
+              "id": "zWJyy",
+              "name": "시스템 아이콘",
+              "gap": "$spacing-8",
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "Stqhd",
+                  "type": "ref",
+                  "ref": "y6mY2m",
+                  "name": "상태 신호 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "f9y1E",
+                  "type": "ref",
+                  "ref": "qohVE",
+                  "name": "상태 연결 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "OmEoI",
+                  "type": "ref",
+                  "ref": "o7lslP",
+                  "name": "상태 배터리 아이콘",
+                  "width": 20,
+                  "height": 20,
+                  "fill": "$color-icon-default"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "z7asMf",
+          "type": "ref",
+          "ref": "hqODY",
+          "name": "구독 결제 Top Navigation",
+          "width": "fill_container",
+          "descendants": {
+            "cJ4N4": {
+              "content": "구독 결제"
+            },
+            "w4xXkP": {
+              "enabled": true,
+              "opacity": 0
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "Fur8Y",
+          "name": "요금제 비교 콘텐츠",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 16,
+          "padding": [
+            24,
+            16,
+            32,
+            16
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "M0f1y",
+              "name": "요금제 선택 안내",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "id": "jFm7v",
+                  "type": "ref",
+                  "ref": "OBS0d",
+                  "name": "요금제 선택 제목",
+                  "content": "나에게 맞는 플랜을 선택하세요",
+                  "fill": "$color-text-default"
+                },
+                {
+                  "id": "DSsoX",
+                  "type": "ref",
+                  "ref": "PzihL",
+                  "name": "요금제 선택 설명",
+                  "content": "Free는 기간 제한 없이 계속 이용할 수 있어요. 유료 플랜의 가격과 혜택은 확정 후 공개됩니다.",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "fill": "$color-text-secondary"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "SC59D",
+              "name": "요금제 목록",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "wyvM5",
+                  "name": "Free 요금제 카드",
+                  "width": "fill_container",
+                  "fill": "$color-background-elevated",
+                  "cornerRadius": 16,
+                  "stroke": "$color-border-default",
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "layout": "vertical",
+                  "gap": 14,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "X2Cutg",
+                      "name": "Free 요금제 헤더",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "id": "mp6aH",
+                          "type": "ref",
+                          "ref": "b1zHzO",
+                          "name": "Free 요금제 이름",
+                          "content": "Free",
+                          "fill": "$color-text-default"
+                        },
+                        {
+                          "id": "k60xp",
+                          "type": "ref",
+                          "ref": "GIPgm",
+                          "name": "현재 이용 중 배지",
+                          "descendants": {
+                            "vfv3I": {
+                              "content": "이용 중"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "aVFlA",
+                      "name": "Free 가격과 기간",
+                      "gap": 8,
+                      "alignItems": "end",
+                      "children": [
+                        {
+                          "id": "ic5wU",
+                          "type": "ref",
+                          "ref": "zhAxy",
+                          "name": "Free 가격",
+                          "content": "0원",
+                          "fill": "$color-text-default"
+                        },
+                        {
+                          "id": "JaQl8",
+                          "type": "ref",
+                          "ref": "O7fbW",
+                          "name": "Free 기간",
+                          "content": "· 기간 제한 없음",
+                          "fill": "$color-text-muted"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Z7nbtG",
+                      "name": "Free 혜택",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "id": "QPFQ6",
+                          "type": "ref",
+                          "ref": "o5LynA",
+                          "name": "Free 혜택 체크 아이콘",
+                          "width": 16,
+                          "height": 16,
+                          "fill": "$color-icon-brand"
+                        },
+                        {
+                          "id": "TKK6y",
+                          "type": "ref",
+                          "ref": "PzihL",
+                          "name": "Free 혜택 설명",
+                          "content": "기본 기능 전체",
+                          "fill": "$color-text-secondary"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "mMqa4",
+                  "name": "Standard 요금제 카드",
+                  "width": "fill_container",
+                  "fill": "$color-background-brand-subtle",
+                  "cornerRadius": 16,
+                  "stroke": "$color-border-brand",
+                  "strokeWidth": 2,
+                  "strokeAlignment": "inner",
+                  "layout": "vertical",
+                  "gap": 14,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "JMDYF",
+                      "name": "Standard 요금제 헤더",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "id": "M2aQr",
+                          "type": "ref",
+                          "ref": "b1zHzO",
+                          "name": "Standard 요금제 이름",
+                          "content": "Standard",
+                          "fill": "$color-text-default"
+                        },
+                        {
+                          "id": "w7EHDY",
+                          "type": "ref",
+                          "ref": "yoAvI",
+                          "name": "추천 요금제 배지",
+                          "descendants": {
+                            "PMss2": {
+                              "content": "추천"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "S37MJF",
+                      "name": "Standard 가격과 기간",
+                      "gap": 8,
+                      "alignItems": "end",
+                      "children": [
+                        {
+                          "id": "D0fL8J",
+                          "type": "ref",
+                          "ref": "zhAxy",
+                          "name": "Standard 가격",
+                          "content": "가격 확정 예정",
+                          "fill": "$color-text-default"
+                        },
+                        {
+                          "id": "ODXcg",
+                          "type": "ref",
+                          "ref": "O7fbW",
+                          "name": "Standard 기간",
+                          "content": "· 30일",
+                          "fill": "$color-text-muted"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "TQDij",
+                      "name": "Standard 혜택",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "id": "x4YKne",
+                          "type": "ref",
+                          "ref": "o5LynA",
+                          "name": "Standard 혜택 체크 아이콘",
+                          "width": 16,
+                          "height": 16,
+                          "fill": "$color-icon-brand"
+                        },
+                        {
+                          "id": "cUWI1",
+                          "type": "ref",
+                          "ref": "PzihL",
+                          "name": "Standard 혜택 설명",
+                          "content": "혜택 확정 예정",
+                          "fill": "$color-text-secondary"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "N3y9r",
+                      "type": "ref",
+                      "ref": "Nq0Yk",
+                      "name": "Standard 구독하기 버튼",
+                      "width": "fill_container",
+                      "descendants": {
+                        "JS9im": {
+                          "enabled": false
+                        },
+                        "vtSyD": {
+                          "content": "구독하기"
+                        },
+                        "RUEF8": {
+                          "enabled": false
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "fQHqU",
+                  "name": "Premium 요금제 카드",
+                  "width": "fill_container",
+                  "fill": "$color-background-elevated",
+                  "cornerRadius": 16,
+                  "stroke": "$color-border-default",
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "layout": "vertical",
+                  "gap": 14,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "He8tO",
+                      "name": "Premium 요금제 헤더",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "id": "MskMf",
+                          "type": "ref",
+                          "ref": "b1zHzO",
+                          "name": "Premium 요금제 이름",
+                          "content": "Premium",
+                          "fill": "$color-text-default"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "jWyuH",
+                      "name": "Premium 가격과 기간",
+                      "gap": 8,
+                      "alignItems": "end",
+                      "children": [
+                        {
+                          "id": "fsX6B",
+                          "type": "ref",
+                          "ref": "zhAxy",
+                          "name": "Premium 가격",
+                          "content": "가격 확정 예정",
+                          "fill": "$color-text-default"
+                        },
+                        {
+                          "id": "v2xby",
+                          "type": "ref",
+                          "ref": "O7fbW",
+                          "name": "Premium 기간",
+                          "content": "· 30일",
+                          "fill": "$color-text-muted"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "wsGIp",
+                      "name": "Premium 혜택",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "id": "m7SoVb",
+                          "type": "ref",
+                          "ref": "o5LynA",
+                          "name": "Premium 혜택 체크 아이콘",
+                          "width": 16,
+                          "height": 16,
+                          "fill": "$color-icon-brand"
+                        },
+                        {
+                          "id": "T59rxA",
+                          "type": "ref",
+                          "ref": "PzihL",
+                          "name": "Premium 혜택 설명",
+                          "content": "Standard 상위 혜택 · 확정 예정",
+                          "fill": "$color-text-secondary"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "EITt9",
+                      "type": "ref",
+                      "ref": "Nq0Yk",
+                      "name": "Premium 구독하기 버튼",
+                      "width": "fill_container",
+                      "descendants": {
+                        "JS9im": {
+                          "enabled": false
+                        },
+                        "vtSyD": {
+                          "content": "구독하기"
+                        },
+                        "RUEF8": {
+                          "enabled": false
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "tLZq4",
+              "name": "결제 정책 안내",
+              "width": "fill_container",
+              "fill": "$color-background-subtle",
+              "cornerRadius": 12,
+              "gap": 8,
+              "padding": 12,
+              "children": [
+                {
+                  "id": "u36MI",
+                  "type": "ref",
+                  "ref": "CoYrb",
+                  "name": "결제 정책 정보 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-secondary"
+                },
+                {
+                  "id": "cJnqv",
+                  "type": "ref",
+                  "ref": "O7fbW",
+                  "name": "결제 정책 안내 문구",
+                  "content": "유료 플랜은 30일 이용권이에요. 자동 갱신·플랜 변경·환불 정책은 확정 후 결제 전에 안내됩니다.",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "fill": "$color-text-muted"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "ZivWS",
+      "x": 7040,
+      "y": 0,
+      "name": "숨은맛집 · 결제 완료",
+      "clip": true,
+      "width": 360,
+      "height": 844,
+      "fill": "$color-background-default",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "r3s7vR",
+          "name": "결제 완료 상태 표시줄",
+          "width": "fill_container",
+          "height": 62,
+          "padding": [
+            0,
+            "$spacing-20"
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "YwHtQ",
+              "type": "ref",
+              "ref": "rA4ir",
+              "name": "현재 시간",
+              "content": "9:41",
+              "fill": "$color-text-default"
+            },
+            {
+              "type": "frame",
+              "id": "tuWNU",
+              "name": "시스템 아이콘",
+              "gap": "$spacing-8",
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "BeLQI",
+                  "type": "ref",
+                  "ref": "y6mY2m",
+                  "name": "상태 신호 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "qC80s",
+                  "type": "ref",
+                  "ref": "qohVE",
+                  "name": "상태 연결 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "RpKRl",
+                  "type": "ref",
+                  "ref": "o7lslP",
+                  "name": "상태 배터리 아이콘",
+                  "width": 20,
+                  "height": 20,
+                  "fill": "$color-icon-default"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "uryhB",
+          "name": "결제 완료 콘텐츠",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            40,
+            16,
+            32,
+            16
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "iQedl",
+              "name": "결제 완료 안내",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "mYLd2",
+                  "name": "결제 완료 아이콘 배경",
+                  "width": 64,
+                  "height": 64,
+                  "fill": "$color-background-brand-soft",
+                  "cornerRadius": 999,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "HIoEb",
+                      "type": "ref",
+                      "ref": "N1d93",
+                      "name": "결제 완료 체크 아이콘",
+                      "width": 28,
+                      "height": 28,
+                      "fill": "$color-icon-brand"
+                    }
+                  ]
+                },
+                {
+                  "id": "oxcfx",
+                  "type": "ref",
+                  "ref": "OBS0d",
+                  "name": "결제 완료 제목",
+                  "content": "결제 완료",
+                  "fill": "$color-text-default"
+                },
+                {
+                  "id": "MqCZV",
+                  "type": "ref",
+                  "ref": "PzihL",
+                  "name": "결제 완료 설명",
+                  "content": "Standard 구독이 시작됐어요",
+                  "fill": "$color-text-secondary"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "h0KPQI",
+              "name": "결제 영수증",
+              "width": "fill_container",
+              "fill": "$color-background-elevated",
+              "cornerRadius": 16,
+              "stroke": "$color-border-default",
+              "strokeWidth": 1,
+              "strokeAlignment": "inner",
+              "layout": "vertical",
+              "gap": 16,
+              "padding": 20,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "sOkUu",
+                  "name": "영수증 헤더",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ozOy8",
+                      "name": "영수증 제목 영역",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "tIGZw",
+                          "name": "영수증 아이콘",
+                          "width": 20,
+                          "height": 20,
+                          "icon": "receipt-text",
+                          "library": "lucide",
+                          "fill": "$color-icon-brand"
+                        },
+                        {
+                          "id": "e1eF9",
+                          "type": "ref",
+                          "ref": "zhAxy",
+                          "name": "영수증 제목",
+                          "content": "결제 영수증",
+                          "fill": "$color-text-default"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "O8xmd",
+                      "type": "ref",
+                      "ref": "GIPgm",
+                      "name": "결제 완료 배지",
+                      "descendants": {
+                        "vfv3I": {
+                          "content": "결제 완료"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "rectangle",
+                  "id": "FLzoa",
+                  "name": "영수증 구분선",
+                  "fill": "$color-border-subtle",
+                  "width": "fill_container",
+                  "height": 1
+                },
+                {
+                  "type": "frame",
+                  "id": "zoe9f",
+                  "name": "플랜 영수증 행",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "UP6vM",
+                      "type": "ref",
+                      "ref": "O7fbW",
+                      "name": "플랜 레이블",
+                      "content": "플랜",
+                      "fill": "$color-text-muted"
+                    },
+                    {
+                      "id": "C8Fq8",
+                      "type": "ref",
+                      "ref": "rA4ir",
+                      "name": "플랜 값",
+                      "content": "Standard 30일",
+                      "fill": "$color-text-default"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "DVBpo",
+                  "name": "결제 금액 영수증 행",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "l0joJ",
+                      "type": "ref",
+                      "ref": "O7fbW",
+                      "name": "결제 금액 레이블",
+                      "content": "결제 금액",
+                      "fill": "$color-text-muted"
+                    },
+                    {
+                      "id": "NnDlq",
+                      "type": "ref",
+                      "ref": "rA4ir",
+                      "name": "결제 금액 값",
+                      "content": "가격 확정 예정",
+                      "fill": "$color-text-default"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "LFPwv",
+                  "name": "결제 수단 영수증 행",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "VEnnS",
+                      "type": "ref",
+                      "ref": "O7fbW",
+                      "name": "결제 수단 레이블",
+                      "content": "결제 수단",
+                      "fill": "$color-text-muted"
+                    },
+                    {
+                      "id": "xJ56u",
+                      "type": "ref",
+                      "ref": "O7fbW",
+                      "name": "결제 수단 값",
+                      "content": "카드 (•••• 1234)",
+                      "fill": "$color-text-default"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "RdwMY",
+                  "name": "결제 일시 영수증 행",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "R1e609",
+                      "type": "ref",
+                      "ref": "O7fbW",
+                      "name": "결제 일시 레이블",
+                      "content": "결제 일시",
+                      "fill": "$color-text-muted"
+                    },
+                    {
+                      "id": "s9lP9k",
+                      "type": "ref",
+                      "ref": "O7fbW",
+                      "name": "결제 일시 값",
+                      "content": "2026.08.13 14:32",
+                      "fill": "$color-text-default"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "HqGr7",
+                  "name": "이용 기간 영수증 행",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "KzB3t",
+                      "type": "ref",
+                      "ref": "O7fbW",
+                      "name": "이용 기간 레이블",
+                      "content": "이용 기간",
+                      "fill": "$color-text-muted"
+                    },
+                    {
+                      "id": "R9oz8h",
+                      "type": "ref",
+                      "ref": "O7fbW",
+                      "name": "이용 기간 값",
+                      "content": "2026.08.13 ~ 09.11",
+                      "fill": "$color-text-default"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "GU8z4",
+                  "name": "주문 번호 영수증 행",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "M05GG",
+                      "type": "ref",
+                      "ref": "O7fbW",
+                      "name": "주문 번호 레이블",
+                      "content": "주문 번호",
+                      "fill": "$color-text-muted"
+                    },
+                    {
+                      "id": "YMHac",
+                      "type": "ref",
+                      "ref": "O7fbW",
+                      "name": "주문 번호 값",
+                      "content": "ORD-20260813-0182",
+                      "fill": "$color-text-default"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Y0ojM",
+              "name": "결제 완료 유연 여백",
+              "width": "fill_container",
+              "height": "fill_container"
+            },
+            {
+              "id": "U9u3f",
+              "type": "ref",
+              "ref": "u8QYqM",
+              "name": "결제내역 확인 버튼",
+              "width": "fill_container",
+              "descendants": {
+                "awFiz": {
+                  "enabled": false
+                },
+                "rCnmy": {
+                  "content": "확인 · 결제내역으로 이동"
+                },
+                "ujax6": {
+                  "enabled": false
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "nEDjs",
+      "x": 7480,
+      "y": 0,
+      "name": "숨은맛집 · 마이페이지 v1.1",
+      "clip": true,
+      "width": 360,
+      "height": 1024,
+      "fill": "$color-background-default",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "u6vUEq",
+          "name": "마이페이지 상태 표시줄",
+          "width": "fill_container",
+          "height": 62,
+          "padding": [
+            0,
+            "$spacing-20"
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "bXRAM",
+              "type": "ref",
+              "ref": "rA4ir",
+              "name": "현재 시간",
+              "content": "9:41",
+              "fill": "$color-text-default"
+            },
+            {
+              "type": "frame",
+              "id": "B9GiEc",
+              "name": "시스템 아이콘",
+              "gap": "$spacing-8",
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "AQy5n",
+                  "type": "ref",
+                  "ref": "y6mY2m",
+                  "name": "상태 신호 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "Xe7T6",
+                  "type": "ref",
+                  "ref": "qohVE",
+                  "name": "상태 연결 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "a8HjG",
+                  "type": "ref",
+                  "ref": "o7lslP",
+                  "name": "상태 배터리 아이콘",
+                  "width": 20,
+                  "height": 20,
+                  "fill": "$color-icon-default"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Si8mi",
+          "type": "ref",
+          "ref": "hqODY",
+          "name": "마이페이지 Top Navigation",
+          "width": "fill_container",
+          "descendants": {
+            "cJ4N4": {
+              "content": "마이 페이지"
+            },
+            "w4xXkP": {
+              "enabled": true,
+              "opacity": 0
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "QmJXy",
+          "name": "마이페이지 콘텐츠",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            24,
+            16,
+            32,
+            16
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "T5gioA",
+              "name": "프로필 정보",
+              "width": "fill_container",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "k3W2p",
+                  "name": "기본 프로필 이미지",
+                  "width": 88,
+                  "height": 88,
+                  "fill": "$color-background-brand-soft",
+                  "cornerRadius": 999,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "UVvCh",
+                      "type": "ref",
+                      "ref": "cuCoG",
+                      "name": "기본 사용자 아이콘",
+                      "width": 40,
+                      "height": 40,
+                      "fill": "$color-icon-brand"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ezlJM",
+                  "name": "프로필 텍스트와 액션",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Bwy6x",
+                      "name": "닉네임 행",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "id": "M59ZCt",
+                          "type": "ref",
+                          "ref": "b1zHzO",
+                          "name": "현재 닉네임",
+                          "content": "드라이브러버",
+                          "fill": "$color-text-default"
+                        },
+                        {
+                          "id": "oetxo",
+                          "type": "ref",
+                          "ref": "JAzGh",
+                          "name": "닉네임 수정 버튼",
+                          "width": 32,
+                          "height": 32,
+                          "descendants": {
+                            "C9KaR": {
+                              "id": "PEkh0",
+                              "type": "ref",
+                              "ref": "eOXa4",
+                              "name": "닉네임 수정 아이콘",
+                              "width": 20,
+                              "height": 20,
+                              "fill": "$color-icon-secondary"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "S3TLGT",
+                      "type": "ref",
+                      "ref": "ZMIrc",
+                      "name": "Google 계정 배지",
+                      "width": "fit_content",
+                      "fill": "$color-background-brand-subtle",
+                      "stroke": "$color-border-brand",
+                      "descendants": {
+                        "nvVUS": {
+                          "content": "Google 계정 연결됨",
+                          "fill": "$color-text-brand"
+                        }
+                      }
+                    },
+                    {
+                      "id": "L04XpD",
+                      "type": "ref",
+                      "ref": "xiJR5",
+                      "name": "프로필 사진 변경 버튼",
+                      "width": "fit_content",
+                      "descendants": {
+                        "M4f5y": {
+                          "id": "cv6Gb",
+                          "type": "ref",
+                          "ref": "Y74NmU",
+                          "name": "프로필 사진 아이콘",
+                          "fill": "$color-icon-on-inverse"
+                        },
+                        "oBPBO": {
+                          "content": "프로필 사진 변경"
+                        },
+                        "iQirP": {
+                          "enabled": false
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "V90my",
+              "name": "현재 구독 플랜",
+              "width": "fill_container",
+              "fill": "$color-background-brand-subtle",
+              "cornerRadius": 14,
+              "stroke": "$color-border-brand",
+              "strokeWidth": 1,
+              "strokeAlignment": "inner",
+              "layout": "vertical",
+              "gap": 10,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "hDWrp",
+                  "name": "현재 플랜 헤더",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "RyxXU",
+                      "name": "현재 플랜 텍스트",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "id": "NQRQ2",
+                          "type": "ref",
+                          "ref": "O7fbW",
+                          "name": "현재 플랜 레이블",
+                          "content": "현재 플랜",
+                          "fill": "$color-text-muted"
+                        },
+                        {
+                          "id": "jxlzh",
+                          "type": "ref",
+                          "ref": "zhAxy",
+                          "name": "현재 플랜 값",
+                          "content": "Free",
+                          "fill": "$color-text-default"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "KUDTY",
+                      "type": "ref",
+                      "ref": "enuoG",
+                      "name": "구독 관리 버튼",
+                      "descendants": {
+                        "a4fFfq": {
+                          "enabled": false
+                        },
+                        "m2y6gN": {
+                          "content": "구독 관리"
+                        },
+                        "Nrnlo": {
+                          "enabled": true
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "RC4aM",
+                  "type": "ref",
+                  "ref": "O7fbW",
+                  "name": "현재 플랜 설명",
+                  "content": "기본 기능을 기간 제한 없이 이용 중이에요",
+                  "fill": "$color-text-secondary"
+                }
+              ]
+            },
+            {
+              "id": "Eb5Lj",
+              "type": "ref",
+              "ref": "Nfr5e",
+              "name": "마이페이지 v1.1 탭 메뉴",
+              "width": "fill_container",
+              "descendants": {
+                "DbBiB": {
+                  "width": "fill_container"
+                },
+                "tzS33": {
+                  "content": "내가 쓴 글"
+                },
+                "xxaXz": {
+                  "width": "fill_container"
+                },
+                "p6YXe3": {
+                  "content": "결제내역"
+                },
+                "nD3lU": {
+                  "width": "fill_container"
+                },
+                "vaoOJ": {
+                  "content": "취소내역"
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "MGsvS",
+              "name": "내가 쓴 글",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "RDa4N",
+                  "name": "내 글 헤더",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "i1MVq",
+                      "type": "ref",
+                      "ref": "b1zHzO",
+                      "name": "내가 쓴 글 제목",
+                      "content": "내가 쓴 글",
+                      "fill": "$color-text-default"
+                    },
+                    {
+                      "id": "RpBoV",
+                      "type": "ref",
+                      "ref": "ZMIrc",
+                      "name": "내 글 개수 배지",
+                      "descendants": {
+                        "nvVUS": {
+                          "content": "12개"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "sw5bm",
+                  "type": "ref",
+                  "ref": "TQunc",
+                  "name": "오류동 골목 숯불구이 내 글 Card",
+                  "width": "fill_container",
+                  "descendants": {
+                    "juKRT": {
+                      "height": 104,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1708388065149-1304dec1f0ec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU0MjgxMTh8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      }
+                    },
+                    "l1X6P": {
+                      "enabled": false
+                    },
+                    "O1C5rq": {
+                      "gap": "$spacing-8",
+                      "padding": "$spacing-12"
+                    },
+                    "HU5lB": {
+                      "content": "오류동 골목 숯불구이"
+                    },
+                    "qga7j": {
+                      "content": "2026.07.28 · 서울 구로구 오류로"
+                    }
+                  }
+                },
+                {
+                  "id": "iiXAK",
+                  "type": "ref",
+                  "ref": "TQunc",
+                  "name": "밤비 호수 베이커리 내 글 Card",
+                  "width": "fill_container",
+                  "descendants": {
+                    "juKRT": {
+                      "height": 104,
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "https://images.unsplash.com/photo-1776397280298-e9d686b2696d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w4NDM0ODN8MHwxfHJhbmRvbXx8fHx8fHx8fDE3ODU0MjgxMTl8&ixlib=rb-4.1.0&q=80&w=1080",
+                        "mode": "fill"
+                      }
+                    },
+                    "l1X6P": {
+                      "enabled": false
+                    },
+                    "O1C5rq": {
+                      "gap": "$spacing-8",
+                      "padding": "$spacing-12"
+                    },
+                    "HU5lB": {
+                      "content": "밤비 호수 베이커리"
+                    },
+                    "qga7j": {
+                      "content": "2026.07.20 · 경기 부천시 호수로"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "h5WuC5",
+              "type": "ref",
+              "ref": "xiJR5",
+              "name": "로그아웃 버튼",
+              "width": "fill_container",
+              "height": 48,
+              "descendants": {
+                "M4f5y": {
+                  "id": "MdCIJ",
+                  "type": "ref",
+                  "ref": "RcGhC",
+                  "name": "로그아웃 아이콘",
+                  "fill": "$color-icon-on-inverse"
+                },
+                "oBPBO": {
+                  "content": "로그아웃"
+                },
+                "iQirP": {
+                  "enabled": false
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "Ak49x",
+          "name": "마이페이지 하단 탭 바 영역",
+          "width": "fill_container",
+          "height": 68,
+          "padding": [
+            0,
+            16,
+            12,
+            16
+          ],
+          "children": [
+            {
+              "id": "LxgPR",
+              "type": "ref",
+              "ref": "lDagW",
+              "name": "마이페이지 Bottom Navigation",
+              "width": "fill_container",
+              "descendants": {
+                "PgoyG": {
+                  "fill": "$color-background-transparent"
+                },
+                "OzJRQ": {
+                  "fill": "$color-icon-secondary"
+                },
+                "YghfT": {
+                  "fill": "$color-text-secondary"
+                },
+                "bQwI1": {
+                  "type": "frame",
+                  "id": "gyK5R",
+                  "name": "선택 Filled 아이콘 · MY",
+                  "width": 24,
+                  "height": 24,
+                  "fill": "$color-icon-brand",
+                  "cornerRadius": 7,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "nmwXo",
+                      "type": "ref",
+                      "ref": "Wsjxq",
+                      "name": "선택 MY 아이콘 · 24",
+                      "width": 24,
+                      "height": 24,
+                      "fill": "$color-icon-on-brand"
+                    }
+                  ]
+                },
+                "w0dm9c": {
+                  "fill": "$color-text-brand"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "JKkex",
+      "x": 7920,
+      "y": 0,
+      "name": "숨은맛집 · 마이페이지 결제내역",
+      "clip": true,
+      "width": 360,
+      "height": 1024,
+      "fill": "$color-background-default",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "EiVpL",
+          "name": "마이페이지 상태 표시줄",
+          "width": "fill_container",
+          "height": 62,
+          "padding": [
+            0,
+            "$spacing-20"
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "viCG8",
+              "type": "ref",
+              "ref": "rA4ir",
+              "name": "현재 시간",
+              "content": "9:41",
+              "fill": "$color-text-default"
+            },
+            {
+              "type": "frame",
+              "id": "EdKZg",
+              "name": "시스템 아이콘",
+              "gap": "$spacing-8",
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "P7aG5",
+                  "type": "ref",
+                  "ref": "y6mY2m",
+                  "name": "상태 신호 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "ifLGS",
+                  "type": "ref",
+                  "ref": "qohVE",
+                  "name": "상태 연결 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "W7pDK",
+                  "type": "ref",
+                  "ref": "o7lslP",
+                  "name": "상태 배터리 아이콘",
+                  "width": 20,
+                  "height": 20,
+                  "fill": "$color-icon-default"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "iWEoO",
+          "type": "ref",
+          "ref": "hqODY",
+          "name": "마이페이지 Top Navigation",
+          "width": "fill_container",
+          "descendants": {
+            "cJ4N4": {
+              "content": "마이 페이지"
+            },
+            "w4xXkP": {
+              "enabled": true,
+              "opacity": 0
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "vx8wP",
+          "name": "마이페이지 콘텐츠",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            24,
+            16,
+            32,
+            16
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "l2zuVm",
+              "name": "프로필 정보",
+              "width": "fill_container",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "U14HSi",
+                  "name": "기본 프로필 이미지",
+                  "width": 88,
+                  "height": 88,
+                  "fill": "$color-background-brand-soft",
+                  "cornerRadius": 999,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "w5RHJL",
+                      "type": "ref",
+                      "ref": "cuCoG",
+                      "name": "기본 사용자 아이콘",
+                      "width": 40,
+                      "height": 40,
+                      "fill": "$color-icon-brand"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "h0jkC",
+                  "name": "프로필 텍스트와 액션",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "XZ22o",
+                      "name": "닉네임 행",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "id": "V3aD2U",
+                          "type": "ref",
+                          "ref": "b1zHzO",
+                          "name": "현재 닉네임",
+                          "content": "드라이브러버",
+                          "fill": "$color-text-default"
+                        },
+                        {
+                          "id": "agu69",
+                          "type": "ref",
+                          "ref": "JAzGh",
+                          "name": "닉네임 수정 버튼",
+                          "width": 32,
+                          "height": 32,
+                          "descendants": {
+                            "C9KaR": {
+                              "id": "Psa79",
+                              "type": "ref",
+                              "ref": "eOXa4",
+                              "name": "닉네임 수정 아이콘",
+                              "width": 20,
+                              "height": 20,
+                              "fill": "$color-icon-secondary"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "dmASo",
+                      "type": "ref",
+                      "ref": "ZMIrc",
+                      "name": "Google 계정 배지",
+                      "width": "fit_content",
+                      "fill": "$color-background-brand-subtle",
+                      "stroke": "$color-border-brand",
+                      "descendants": {
+                        "nvVUS": {
+                          "content": "Google 계정 연결됨",
+                          "fill": "$color-text-brand"
+                        }
+                      }
+                    },
+                    {
+                      "id": "dkBP4",
+                      "type": "ref",
+                      "ref": "xiJR5",
+                      "name": "프로필 사진 변경 버튼",
+                      "width": "fit_content",
+                      "descendants": {
+                        "M4f5y": {
+                          "id": "GTE9v",
+                          "type": "ref",
+                          "ref": "Y74NmU",
+                          "name": "프로필 사진 아이콘",
+                          "fill": "$color-icon-on-inverse"
+                        },
+                        "oBPBO": {
+                          "content": "프로필 사진 변경"
+                        },
+                        "iQirP": {
+                          "enabled": false
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "yWsn6",
+              "name": "현재 구독 플랜",
+              "width": "fill_container",
+              "fill": "$color-background-brand-subtle",
+              "cornerRadius": 14,
+              "stroke": "$color-border-brand",
+              "strokeWidth": 1,
+              "strokeAlignment": "inner",
+              "layout": "vertical",
+              "gap": 10,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "N1Avzx",
+                  "name": "현재 플랜 헤더",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "k9RIMO",
+                      "name": "현재 플랜 텍스트",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "id": "UAoG6",
+                          "type": "ref",
+                          "ref": "O7fbW",
+                          "name": "현재 플랜 레이블",
+                          "content": "현재 플랜",
+                          "fill": "$color-text-muted"
+                        },
+                        {
+                          "id": "Kc9RE",
+                          "type": "ref",
+                          "ref": "zhAxy",
+                          "name": "현재 플랜 값",
+                          "content": "Standard",
+                          "fill": "$color-text-default"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "J9rcLp",
+                      "type": "ref",
+                      "ref": "enuoG",
+                      "name": "구독 관리 버튼",
+                      "descendants": {
+                        "a4fFfq": {
+                          "enabled": false
+                        },
+                        "m2y6gN": {
+                          "content": "구독 관리"
+                        },
+                        "Nrnlo": {
+                          "enabled": true
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "rTD13",
+                  "type": "ref",
+                  "ref": "O7fbW",
+                  "name": "현재 플랜 설명",
+                  "content": "2026.09.11까지 이용할 수 있어요",
+                  "fill": "$color-text-secondary"
+                }
+              ]
+            },
+            {
+              "id": "UaETt",
+              "type": "ref",
+              "ref": "Nfr5e",
+              "name": "마이페이지 v1.1 탭 메뉴",
+              "width": "fill_container",
+              "descendants": {
+                "DbBiB": {
+                  "width": "fill_container"
+                },
+                "tzS33": {
+                  "content": "내가 쓴 글",
+                  "fill": "$color-text-secondary"
+                },
+                "Hf5mv": {
+                  "fill": "$color-background-transparent"
+                },
+                "xxaXz": {
+                  "width": "fill_container"
+                },
+                "p6YXe3": {
+                  "content": "결제내역",
+                  "fill": "$color-text-brand"
+                },
+                "Ww5GU": {
+                  "fill": "$color-background-brand"
+                },
+                "nD3lU": {
+                  "width": "fill_container"
+                },
+                "vaoOJ": {
+                  "content": "취소내역"
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "fG6US",
+              "name": "결제내역 콘텐츠",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "rgnwr",
+                  "name": "결제내역 헤더",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "L8QWQ",
+                      "type": "ref",
+                      "ref": "b1zHzO",
+                      "name": "결제내역 제목",
+                      "content": "결제내역",
+                      "fill": "$color-text-default"
+                    },
+                    {
+                      "id": "G0ScLZ",
+                      "type": "ref",
+                      "ref": "ZMIrc",
+                      "name": "결제내역 개수 배지",
+                      "descendants": {
+                        "nvVUS": {
+                          "content": "1건"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "ThtHe",
+                  "name": "Standard 결제 카드",
+                  "width": "fill_container",
+                  "fill": "$color-background-elevated",
+                  "cornerRadius": 16,
+                  "stroke": "$color-border-default",
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "layout": "vertical",
+                  "gap": 14,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "db41O",
+                      "name": "결제 카드 헤더",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "xYlhg",
+                          "name": "결제 플랜 정보",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "id": "ZEfdS",
+                              "type": "ref",
+                              "ref": "zhAxy",
+                              "name": "결제 플랜 이름",
+                              "content": "Standard 30일",
+                              "fill": "$color-text-default"
+                            },
+                            {
+                              "id": "LOpcc",
+                              "type": "ref",
+                              "ref": "O7fbW",
+                              "name": "결제 주문 번호",
+                              "content": "ORD-20260813-0182",
+                              "fill": "$color-text-muted"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "HNqCq",
+                          "type": "ref",
+                          "ref": "GIPgm",
+                          "name": "결제 상태 배지",
+                          "descendants": {
+                            "vfv3I": {
+                              "content": "결제 완료"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "NSehI",
+                      "name": "결제 요약",
+                      "width": "fill_container",
+                      "stroke": "$color-border-subtle",
+                      "strokeWidth": {
+                        "top": 1
+                      },
+                      "strokeAlignment": "inner",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": [
+                        12,
+                        0,
+                        0,
+                        0
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "S2kWr",
+                          "name": "결제일 행",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "id": "EwaZo",
+                              "type": "ref",
+                              "ref": "O7fbW",
+                              "name": "결제일 레이블",
+                              "content": "결제일",
+                              "fill": "$color-text-muted"
+                            },
+                            {
+                              "id": "kfBYY",
+                              "type": "ref",
+                              "ref": "O7fbW",
+                              "name": "결제일 값",
+                              "content": "2026.08.13",
+                              "fill": "$color-text-default"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Sc5BV",
+                          "name": "결제 금액 행",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "id": "WgLW5",
+                              "type": "ref",
+                              "ref": "O7fbW",
+                              "name": "결제 금액 레이블",
+                              "content": "결제 금액",
+                              "fill": "$color-text-muted"
+                            },
+                            {
+                              "id": "Drm42",
+                              "type": "ref",
+                              "ref": "O7fbW",
+                              "name": "결제 금액 값",
+                              "content": "가격 확정 예정",
+                              "fill": "$color-text-default"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "S6mYx",
+                          "name": "이용 기간 행",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "id": "QXaTg",
+                              "type": "ref",
+                              "ref": "O7fbW",
+                              "name": "이용 기간 레이블",
+                              "content": "이용 기간",
+                              "fill": "$color-text-muted"
+                            },
+                            {
+                              "id": "SmyEy",
+                              "type": "ref",
+                              "ref": "O7fbW",
+                              "name": "이용 기간 값",
+                              "content": "08.13 ~ 09.11",
+                              "fill": "$color-text-default"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "ro3wd",
+                      "name": "결제 카드 액션",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "id": "u6ncy7",
+                          "type": "ref",
+                          "ref": "enuoG",
+                          "name": "영수증 보기 버튼",
+                          "width": "fill_container",
+                          "descendants": {
+                            "a4fFfq": {
+                              "enabled": false
+                            },
+                            "m2y6gN": {
+                              "content": "영수증 보기"
+                            },
+                            "Nrnlo": {
+                              "enabled": false
+                            }
+                          }
+                        },
+                        {
+                          "id": "eXrec",
+                          "type": "ref",
+                          "ref": "rpp02",
+                          "name": "결제 취소 버튼",
+                          "width": "fill_container",
+                          "descendants": {
+                            "yjO5F": {
+                              "enabled": false
+                            },
+                            "d7HYE": {
+                              "content": "결제 취소"
+                            },
+                            "yR2vE": {
+                              "enabled": false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "IEvYF",
+              "type": "ref",
+              "ref": "xiJR5",
+              "name": "로그아웃 버튼",
+              "width": "fill_container",
+              "height": 48,
+              "descendants": {
+                "M4f5y": {
+                  "id": "yFkFd",
+                  "type": "ref",
+                  "ref": "RcGhC",
+                  "name": "로그아웃 아이콘",
+                  "fill": "$color-icon-on-inverse"
+                },
+                "oBPBO": {
+                  "content": "로그아웃"
+                },
+                "iQirP": {
+                  "enabled": false
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "imIac",
+          "name": "마이페이지 하단 탭 바 영역",
+          "width": "fill_container",
+          "height": 68,
+          "padding": [
+            0,
+            16,
+            12,
+            16
+          ],
+          "children": [
+            {
+              "id": "NXqsF",
+              "type": "ref",
+              "ref": "lDagW",
+              "name": "마이페이지 Bottom Navigation",
+              "width": "fill_container",
+              "descendants": {
+                "PgoyG": {
+                  "fill": "$color-background-transparent"
+                },
+                "OzJRQ": {
+                  "fill": "$color-icon-secondary"
+                },
+                "YghfT": {
+                  "fill": "$color-text-secondary"
+                },
+                "bQwI1": {
+                  "type": "frame",
+                  "id": "e9yZq",
+                  "name": "선택 Filled 아이콘 · MY",
+                  "width": 24,
+                  "height": 24,
+                  "fill": "$color-icon-brand",
+                  "cornerRadius": 7,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "AknNn",
+                      "type": "ref",
+                      "ref": "Wsjxq",
+                      "name": "선택 MY 아이콘 · 24",
+                      "width": 24,
+                      "height": 24,
+                      "fill": "$color-icon-on-brand"
+                    }
+                  ]
+                },
+                "w0dm9c": {
+                  "fill": "$color-text-brand"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "M4rkR",
+      "x": 8360,
+      "y": 0,
+      "name": "숨은맛집 · 마이페이지 취소내역",
+      "clip": true,
+      "width": 360,
+      "height": 1024,
+      "fill": "$color-background-default",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "GLncY",
+          "name": "마이페이지 상태 표시줄",
+          "width": "fill_container",
+          "height": 62,
+          "padding": [
+            0,
+            "$spacing-20"
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "EyHlG",
+              "type": "ref",
+              "ref": "rA4ir",
+              "name": "현재 시간",
+              "content": "9:41",
+              "fill": "$color-text-default"
+            },
+            {
+              "type": "frame",
+              "id": "NqrZN",
+              "name": "시스템 아이콘",
+              "gap": "$spacing-8",
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "rpixX",
+                  "type": "ref",
+                  "ref": "y6mY2m",
+                  "name": "상태 신호 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "I0UjaG",
+                  "type": "ref",
+                  "ref": "qohVE",
+                  "name": "상태 연결 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "Qi6hs",
+                  "type": "ref",
+                  "ref": "o7lslP",
+                  "name": "상태 배터리 아이콘",
+                  "width": 20,
+                  "height": 20,
+                  "fill": "$color-icon-default"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "Q3Bg8E",
+          "type": "ref",
+          "ref": "hqODY",
+          "name": "마이페이지 Top Navigation",
+          "width": "fill_container",
+          "descendants": {
+            "cJ4N4": {
+              "content": "마이 페이지"
+            },
+            "w4xXkP": {
+              "enabled": true,
+              "opacity": 0
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "Z3HbQy",
+          "name": "마이페이지 콘텐츠",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            24,
+            16,
+            32,
+            16
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "K9F05V",
+              "name": "프로필 정보",
+              "width": "fill_container",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "ZFafO",
+                  "name": "기본 프로필 이미지",
+                  "width": 88,
+                  "height": 88,
+                  "fill": "$color-background-brand-soft",
+                  "cornerRadius": 999,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "Ep98E",
+                      "type": "ref",
+                      "ref": "cuCoG",
+                      "name": "기본 사용자 아이콘",
+                      "width": 40,
+                      "height": 40,
+                      "fill": "$color-icon-brand"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "nD6gQ",
+                  "name": "프로필 텍스트와 액션",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "Gtwnh",
+                      "name": "닉네임 행",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "id": "bZIFv",
+                          "type": "ref",
+                          "ref": "b1zHzO",
+                          "name": "현재 닉네임",
+                          "content": "드라이브러버",
+                          "fill": "$color-text-default"
+                        },
+                        {
+                          "id": "X8wJsc",
+                          "type": "ref",
+                          "ref": "JAzGh",
+                          "name": "닉네임 수정 버튼",
+                          "width": 32,
+                          "height": 32,
+                          "descendants": {
+                            "C9KaR": {
+                              "id": "xETFw",
+                              "type": "ref",
+                              "ref": "eOXa4",
+                              "name": "닉네임 수정 아이콘",
+                              "width": 20,
+                              "height": 20,
+                              "fill": "$color-icon-secondary"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "SuEXd",
+                      "type": "ref",
+                      "ref": "ZMIrc",
+                      "name": "Google 계정 배지",
+                      "width": "fit_content",
+                      "fill": "$color-background-brand-subtle",
+                      "stroke": "$color-border-brand",
+                      "descendants": {
+                        "nvVUS": {
+                          "content": "Google 계정 연결됨",
+                          "fill": "$color-text-brand"
+                        }
+                      }
+                    },
+                    {
+                      "id": "kZdcM",
+                      "type": "ref",
+                      "ref": "xiJR5",
+                      "name": "프로필 사진 변경 버튼",
+                      "width": "fit_content",
+                      "descendants": {
+                        "M4f5y": {
+                          "id": "qLAPV",
+                          "type": "ref",
+                          "ref": "Y74NmU",
+                          "name": "프로필 사진 아이콘",
+                          "fill": "$color-icon-on-inverse"
+                        },
+                        "oBPBO": {
+                          "content": "프로필 사진 변경"
+                        },
+                        "iQirP": {
+                          "enabled": false
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "j3IZLY",
+              "name": "현재 구독 플랜",
+              "width": "fill_container",
+              "fill": "$color-background-brand-subtle",
+              "cornerRadius": 14,
+              "stroke": "$color-border-brand",
+              "strokeWidth": 1,
+              "strokeAlignment": "inner",
+              "layout": "vertical",
+              "gap": 10,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "xJDB7",
+                  "name": "현재 플랜 헤더",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "mBWqS",
+                      "name": "현재 플랜 텍스트",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "id": "ywCPp",
+                          "type": "ref",
+                          "ref": "O7fbW",
+                          "name": "현재 플랜 레이블",
+                          "content": "현재 플랜",
+                          "fill": "$color-text-muted"
+                        },
+                        {
+                          "id": "T1ulM",
+                          "type": "ref",
+                          "ref": "zhAxy",
+                          "name": "현재 플랜 값",
+                          "content": "Free",
+                          "fill": "$color-text-default"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "GMTeQ",
+                      "type": "ref",
+                      "ref": "enuoG",
+                      "name": "구독 관리 버튼",
+                      "descendants": {
+                        "a4fFfq": {
+                          "enabled": false
+                        },
+                        "m2y6gN": {
+                          "content": "구독 관리"
+                        },
+                        "Nrnlo": {
+                          "enabled": true
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "rrfDt",
+                  "type": "ref",
+                  "ref": "O7fbW",
+                  "name": "현재 플랜 설명",
+                  "content": "유료 구독 취소 후 Free 플랜을 이용 중이에요",
+                  "fill": "$color-text-secondary"
+                }
+              ]
+            },
+            {
+              "id": "DJ2Pk",
+              "type": "ref",
+              "ref": "Nfr5e",
+              "name": "마이페이지 v1.1 탭 메뉴",
+              "width": "fill_container",
+              "descendants": {
+                "DbBiB": {
+                  "width": "fill_container"
+                },
+                "tzS33": {
+                  "content": "내가 쓴 글",
+                  "fill": "$color-text-secondary"
+                },
+                "Hf5mv": {
+                  "fill": "$color-background-transparent"
+                },
+                "xxaXz": {
+                  "width": "fill_container"
+                },
+                "p6YXe3": {
+                  "content": "결제내역",
+                  "fill": "$color-text-secondary"
+                },
+                "Ww5GU": {
+                  "fill": "$color-background-transparent"
+                },
+                "nD3lU": {
+                  "width": "fill_container"
+                },
+                "vaoOJ": {
+                  "content": "취소내역",
+                  "fill": "$color-text-brand"
+                },
+                "IbPUH": {
+                  "fill": "$color-background-brand"
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "s0vNu",
+              "name": "취소내역 콘텐츠",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "s0yyu",
+                  "name": "취소내역 헤더",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "fuZ3M",
+                      "type": "ref",
+                      "ref": "b1zHzO",
+                      "name": "취소내역 제목",
+                      "content": "취소내역",
+                      "fill": "$color-text-default"
+                    },
+                    {
+                      "id": "MnmM3",
+                      "type": "ref",
+                      "ref": "ZMIrc",
+                      "name": "취소내역 개수 배지",
+                      "descendants": {
+                        "nvVUS": {
+                          "content": "1건"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "Cn5K2",
+                  "name": "Standard 취소 카드",
+                  "width": "fill_container",
+                  "fill": "$color-background-elevated",
+                  "cornerRadius": 16,
+                  "stroke": "$color-border-default",
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "layout": "vertical",
+                  "gap": 14,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "M2ZvP",
+                      "name": "취소 카드 헤더",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "pauyE",
+                          "name": "취소 플랜 정보",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "id": "C8TRxd",
+                              "type": "ref",
+                              "ref": "zhAxy",
+                              "name": "취소 플랜 이름",
+                              "content": "Standard 30일",
+                              "fill": "$color-text-default"
+                            },
+                            {
+                              "id": "pctMp",
+                              "type": "ref",
+                              "ref": "O7fbW",
+                              "name": "취소 주문 번호",
+                              "content": "ORD-20260813-0182",
+                              "fill": "$color-text-muted"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "j3Z4Ya",
+                          "type": "ref",
+                          "ref": "raDuB",
+                          "name": "환불 처리 상태 배지",
+                          "descendants": {
+                            "ynmmc": {
+                              "content": "처리 중"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "qqlOm",
+                      "name": "취소 요약",
+                      "width": "fill_container",
+                      "stroke": "$color-border-subtle",
+                      "strokeWidth": {
+                        "top": 1
+                      },
+                      "strokeAlignment": "inner",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": [
+                        12,
+                        0,
+                        0,
+                        0
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "Itkv1",
+                          "name": "결제일 행",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "id": "xN8IF",
+                              "type": "ref",
+                              "ref": "O7fbW",
+                              "name": "결제일 레이블",
+                              "content": "결제일",
+                              "fill": "$color-text-muted"
+                            },
+                            {
+                              "id": "Mnsqk",
+                              "type": "ref",
+                              "ref": "O7fbW",
+                              "name": "결제일 값",
+                              "content": "2026.08.13",
+                              "fill": "$color-text-default"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "Y369Zf",
+                          "name": "취소일 행",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "id": "I8bd9T",
+                              "type": "ref",
+                              "ref": "O7fbW",
+                              "name": "취소일 레이블",
+                              "content": "취소일",
+                              "fill": "$color-text-muted"
+                            },
+                            {
+                              "id": "H4zKl",
+                              "type": "ref",
+                              "ref": "O7fbW",
+                              "name": "취소일 값",
+                              "content": "2026.08.20",
+                              "fill": "$color-text-default"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "uB5fq",
+                          "name": "환불 금액 행",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "id": "TetYw",
+                              "type": "ref",
+                              "ref": "O7fbW",
+                              "name": "환불 금액 레이블",
+                              "content": "환불 금액",
+                              "fill": "$color-text-muted"
+                            },
+                            {
+                              "id": "nkJxD",
+                              "type": "ref",
+                              "ref": "O7fbW",
+                              "name": "환불 금액 값",
+                              "content": "정책 확정 후 계산",
+                              "fill": "$color-text-default"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "AJlDv",
+                      "name": "환불 처리 안내",
+                      "width": "fill_container",
+                      "fill": "$color-background-warning-subtle",
+                      "cornerRadius": 10,
+                      "gap": 8,
+                      "padding": 12,
+                      "children": [
+                        {
+                          "id": "texwS",
+                          "type": "ref",
+                          "ref": "CoYrb",
+                          "name": "환불 안내 아이콘",
+                          "width": 16,
+                          "height": 16,
+                          "fill": "$color-icon-warning"
+                        },
+                        {
+                          "id": "WyO8z",
+                          "type": "ref",
+                          "ref": "O7fbW",
+                          "name": "환불 처리 안내 문구",
+                          "content": "PG 처리 완료 후 결제 수단으로 환불돼요.",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "fill": "$color-text-warning"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "rENI6",
+              "type": "ref",
+              "ref": "xiJR5",
+              "name": "로그아웃 버튼",
+              "width": "fill_container",
+              "height": 48,
+              "descendants": {
+                "M4f5y": {
+                  "id": "QDXEa",
+                  "type": "ref",
+                  "ref": "RcGhC",
+                  "name": "로그아웃 아이콘",
+                  "fill": "$color-icon-on-inverse"
+                },
+                "oBPBO": {
+                  "content": "로그아웃"
+                },
+                "iQirP": {
+                  "enabled": false
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "mPAwU",
+          "name": "마이페이지 하단 탭 바 영역",
+          "width": "fill_container",
+          "height": 68,
+          "padding": [
+            0,
+            16,
+            12,
+            16
+          ],
+          "children": [
+            {
+              "id": "r82CY",
+              "type": "ref",
+              "ref": "lDagW",
+              "name": "마이페이지 Bottom Navigation",
+              "width": "fill_container",
+              "descendants": {
+                "PgoyG": {
+                  "fill": "$color-background-transparent"
+                },
+                "OzJRQ": {
+                  "fill": "$color-icon-secondary"
+                },
+                "YghfT": {
+                  "fill": "$color-text-secondary"
+                },
+                "bQwI1": {
+                  "type": "frame",
+                  "id": "N20rE",
+                  "name": "선택 Filled 아이콘 · MY",
+                  "width": 24,
+                  "height": 24,
+                  "fill": "$color-icon-brand",
+                  "cornerRadius": 7,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "xezOG",
+                      "type": "ref",
+                      "ref": "Wsjxq",
+                      "name": "선택 MY 아이콘 · 24",
+                      "width": 24,
+                      "height": 24,
+                      "fill": "$color-icon-on-brand"
+                    }
+                  ]
+                },
+                "w0dm9c": {
+                  "fill": "$color-text-brand"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "zhqqA",
+      "x": 8800,
+      "y": 0,
+      "name": "숨은맛집 · 결제 취소 확인",
+      "clip": true,
+      "width": 360,
+      "height": 1024,
+      "fill": "$color-background-default",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "r82AX",
+          "name": "마이페이지 상태 표시줄",
+          "width": "fill_container",
+          "height": 62,
+          "padding": [
+            0,
+            "$spacing-20"
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "Yv2Ne",
+              "type": "ref",
+              "ref": "rA4ir",
+              "name": "현재 시간",
+              "content": "9:41",
+              "fill": "$color-text-default"
+            },
+            {
+              "type": "frame",
+              "id": "hFBTO",
+              "name": "시스템 아이콘",
+              "gap": "$spacing-8",
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "Y8nP9V",
+                  "type": "ref",
+                  "ref": "y6mY2m",
+                  "name": "상태 신호 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "le0hj",
+                  "type": "ref",
+                  "ref": "qohVE",
+                  "name": "상태 연결 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "qJDGa",
+                  "type": "ref",
+                  "ref": "o7lslP",
+                  "name": "상태 배터리 아이콘",
+                  "width": 20,
+                  "height": 20,
+                  "fill": "$color-icon-default"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "WBr0P",
+          "type": "ref",
+          "ref": "hqODY",
+          "name": "마이페이지 Top Navigation",
+          "width": "fill_container",
+          "descendants": {
+            "cJ4N4": {
+              "content": "마이 페이지"
+            },
+            "w4xXkP": {
+              "enabled": true,
+              "opacity": 0
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "mScb2",
+          "name": "마이페이지 콘텐츠",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            24,
+            16,
+            32,
+            16
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "BES6D",
+              "name": "프로필 정보",
+              "width": "fill_container",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "WHaJ6",
+                  "name": "기본 프로필 이미지",
+                  "width": 88,
+                  "height": 88,
+                  "fill": "$color-background-brand-soft",
+                  "cornerRadius": 999,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "lhDZP",
+                      "type": "ref",
+                      "ref": "cuCoG",
+                      "name": "기본 사용자 아이콘",
+                      "width": 40,
+                      "height": 40,
+                      "fill": "$color-icon-brand"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "OhJd6",
+                  "name": "프로필 텍스트와 액션",
+                  "width": "fill_container",
+                  "layout": "vertical",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "hGweP",
+                      "name": "닉네임 행",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "id": "vlfjl",
+                          "type": "ref",
+                          "ref": "b1zHzO",
+                          "name": "현재 닉네임",
+                          "content": "드라이브러버",
+                          "fill": "$color-text-default"
+                        },
+                        {
+                          "id": "W9swS",
+                          "type": "ref",
+                          "ref": "JAzGh",
+                          "name": "닉네임 수정 버튼",
+                          "width": 32,
+                          "height": 32,
+                          "descendants": {
+                            "C9KaR": {
+                              "id": "O7eHO",
+                              "type": "ref",
+                              "ref": "eOXa4",
+                              "name": "닉네임 수정 아이콘",
+                              "width": 20,
+                              "height": 20,
+                              "fill": "$color-icon-secondary"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "M0A0v",
+                      "type": "ref",
+                      "ref": "ZMIrc",
+                      "name": "Google 계정 배지",
+                      "width": "fit_content",
+                      "fill": "$color-background-brand-subtle",
+                      "stroke": "$color-border-brand",
+                      "descendants": {
+                        "nvVUS": {
+                          "content": "Google 계정 연결됨",
+                          "fill": "$color-text-brand"
+                        }
+                      }
+                    },
+                    {
+                      "id": "Uc5I1",
+                      "type": "ref",
+                      "ref": "xiJR5",
+                      "name": "프로필 사진 변경 버튼",
+                      "width": "fit_content",
+                      "descendants": {
+                        "M4f5y": {
+                          "id": "SxKxf",
+                          "type": "ref",
+                          "ref": "Y74NmU",
+                          "name": "프로필 사진 아이콘",
+                          "fill": "$color-icon-on-inverse"
+                        },
+                        "oBPBO": {
+                          "content": "프로필 사진 변경"
+                        },
+                        "iQirP": {
+                          "enabled": false
+                        }
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Jvy8Z",
+              "name": "현재 구독 플랜",
+              "width": "fill_container",
+              "fill": "$color-background-brand-subtle",
+              "cornerRadius": 14,
+              "stroke": "$color-border-brand",
+              "strokeWidth": 1,
+              "strokeAlignment": "inner",
+              "layout": "vertical",
+              "gap": 10,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "vNZdg",
+                  "name": "현재 플랜 헤더",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "y5wrv",
+                      "name": "현재 플랜 텍스트",
+                      "layout": "vertical",
+                      "gap": 4,
+                      "children": [
+                        {
+                          "id": "j5oQkB",
+                          "type": "ref",
+                          "ref": "O7fbW",
+                          "name": "현재 플랜 레이블",
+                          "content": "현재 플랜",
+                          "fill": "$color-text-muted"
+                        },
+                        {
+                          "id": "Ih8XY",
+                          "type": "ref",
+                          "ref": "zhAxy",
+                          "name": "현재 플랜 값",
+                          "content": "Standard",
+                          "fill": "$color-text-default"
+                        }
+                      ]
+                    },
+                    {
+                      "id": "mLjEq",
+                      "type": "ref",
+                      "ref": "enuoG",
+                      "name": "구독 관리 버튼",
+                      "descendants": {
+                        "a4fFfq": {
+                          "enabled": false
+                        },
+                        "m2y6gN": {
+                          "content": "구독 관리"
+                        },
+                        "Nrnlo": {
+                          "enabled": true
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "dm4yS",
+                  "type": "ref",
+                  "ref": "O7fbW",
+                  "name": "현재 플랜 설명",
+                  "content": "2026.09.11까지 이용할 수 있어요",
+                  "fill": "$color-text-secondary"
+                }
+              ]
+            },
+            {
+              "id": "HP40B",
+              "type": "ref",
+              "ref": "Nfr5e",
+              "name": "마이페이지 v1.1 탭 메뉴",
+              "width": "fill_container",
+              "descendants": {
+                "DbBiB": {
+                  "width": "fill_container"
+                },
+                "tzS33": {
+                  "content": "내가 쓴 글",
+                  "fill": "$color-text-secondary"
+                },
+                "Hf5mv": {
+                  "fill": "$color-background-transparent"
+                },
+                "xxaXz": {
+                  "width": "fill_container"
+                },
+                "p6YXe3": {
+                  "content": "결제내역",
+                  "fill": "$color-text-brand"
+                },
+                "Ww5GU": {
+                  "fill": "$color-background-brand"
+                },
+                "nD3lU": {
+                  "width": "fill_container"
+                },
+                "vaoOJ": {
+                  "content": "취소내역"
+                }
+              }
+            },
+            {
+              "type": "frame",
+              "id": "Ozedx",
+              "name": "결제내역 콘텐츠",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "uGytt",
+                  "name": "결제내역 헤더",
+                  "width": "fill_container",
+                  "justifyContent": "space_between",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "X0UZg",
+                      "type": "ref",
+                      "ref": "b1zHzO",
+                      "name": "결제내역 제목",
+                      "content": "결제내역",
+                      "fill": "$color-text-default"
+                    },
+                    {
+                      "id": "kFIZI",
+                      "type": "ref",
+                      "ref": "ZMIrc",
+                      "name": "결제내역 개수 배지",
+                      "descendants": {
+                        "nvVUS": {
+                          "content": "1건"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "NqA3l",
+                  "name": "Standard 결제 카드",
+                  "width": "fill_container",
+                  "fill": "$color-background-elevated",
+                  "cornerRadius": 16,
+                  "stroke": "$color-border-default",
+                  "strokeWidth": 1,
+                  "strokeAlignment": "inner",
+                  "layout": "vertical",
+                  "gap": 14,
+                  "padding": 16,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "jv039",
+                      "name": "결제 카드 헤더",
+                      "width": "fill_container",
+                      "justifyContent": "space_between",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "x6mgP",
+                          "name": "결제 플랜 정보",
+                          "layout": "vertical",
+                          "gap": 4,
+                          "children": [
+                            {
+                              "id": "R1MgZ",
+                              "type": "ref",
+                              "ref": "zhAxy",
+                              "name": "결제 플랜 이름",
+                              "content": "Standard 30일",
+                              "fill": "$color-text-default"
+                            },
+                            {
+                              "id": "UYPok",
+                              "type": "ref",
+                              "ref": "O7fbW",
+                              "name": "결제 주문 번호",
+                              "content": "ORD-20260813-0182",
+                              "fill": "$color-text-muted"
+                            }
+                          ]
+                        },
+                        {
+                          "id": "Tlw2P",
+                          "type": "ref",
+                          "ref": "GIPgm",
+                          "name": "결제 상태 배지",
+                          "descendants": {
+                            "vfv3I": {
+                              "content": "결제 완료"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Z4BB9O",
+                      "name": "결제 요약",
+                      "width": "fill_container",
+                      "stroke": "$color-border-subtle",
+                      "strokeWidth": {
+                        "top": 1
+                      },
+                      "strokeAlignment": "inner",
+                      "layout": "vertical",
+                      "gap": 8,
+                      "padding": [
+                        12,
+                        0,
+                        0,
+                        0
+                      ],
+                      "children": [
+                        {
+                          "type": "frame",
+                          "id": "tVLOy",
+                          "name": "결제일 행",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "id": "SCG43",
+                              "type": "ref",
+                              "ref": "O7fbW",
+                              "name": "결제일 레이블",
+                              "content": "결제일",
+                              "fill": "$color-text-muted"
+                            },
+                            {
+                              "id": "tWP4T",
+                              "type": "ref",
+                              "ref": "O7fbW",
+                              "name": "결제일 값",
+                              "content": "2026.08.13",
+                              "fill": "$color-text-default"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "FGoMQ",
+                          "name": "결제 금액 행",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "id": "w2uhpa",
+                              "type": "ref",
+                              "ref": "O7fbW",
+                              "name": "결제 금액 레이블",
+                              "content": "결제 금액",
+                              "fill": "$color-text-muted"
+                            },
+                            {
+                              "id": "siXGF",
+                              "type": "ref",
+                              "ref": "O7fbW",
+                              "name": "결제 금액 값",
+                              "content": "가격 확정 예정",
+                              "fill": "$color-text-default"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "frame",
+                          "id": "O4U3Ut",
+                          "name": "이용 기간 행",
+                          "width": "fill_container",
+                          "justifyContent": "space_between",
+                          "alignItems": "center",
+                          "children": [
+                            {
+                              "id": "mav4g",
+                              "type": "ref",
+                              "ref": "O7fbW",
+                              "name": "이용 기간 레이블",
+                              "content": "이용 기간",
+                              "fill": "$color-text-muted"
+                            },
+                            {
+                              "id": "hWmyo",
+                              "type": "ref",
+                              "ref": "O7fbW",
+                              "name": "이용 기간 값",
+                              "content": "08.13 ~ 09.11",
+                              "fill": "$color-text-default"
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "m4sPe",
+                      "name": "결제 카드 액션",
+                      "width": "fill_container",
+                      "gap": 8,
+                      "children": [
+                        {
+                          "id": "Jr4Ot",
+                          "type": "ref",
+                          "ref": "enuoG",
+                          "name": "영수증 보기 버튼",
+                          "width": "fill_container",
+                          "descendants": {
+                            "a4fFfq": {
+                              "enabled": false
+                            },
+                            "m2y6gN": {
+                              "content": "영수증 보기"
+                            },
+                            "Nrnlo": {
+                              "enabled": false
+                            }
+                          }
+                        },
+                        {
+                          "id": "ns77S",
+                          "type": "ref",
+                          "ref": "rpp02",
+                          "name": "결제 취소 버튼",
+                          "width": "fill_container",
+                          "descendants": {
+                            "yjO5F": {
+                              "enabled": false
+                            },
+                            "d7HYE": {
+                              "content": "결제 취소"
+                            },
+                            "yR2vE": {
+                              "enabled": false
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "pxqj0",
+              "type": "ref",
+              "ref": "xiJR5",
+              "name": "로그아웃 버튼",
+              "width": "fill_container",
+              "height": 48,
+              "descendants": {
+                "M4f5y": {
+                  "id": "PSAvT",
+                  "type": "ref",
+                  "ref": "RcGhC",
+                  "name": "로그아웃 아이콘",
+                  "fill": "$color-icon-on-inverse"
+                },
+                "oBPBO": {
+                  "content": "로그아웃"
+                },
+                "iQirP": {
+                  "enabled": false
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "UPeOQ",
+          "name": "마이페이지 하단 탭 바 영역",
+          "width": "fill_container",
+          "height": 68,
+          "padding": [
+            0,
+            16,
+            12,
+            16
+          ],
+          "children": [
+            {
+              "id": "cf3ZH",
+              "type": "ref",
+              "ref": "lDagW",
+              "name": "마이페이지 Bottom Navigation",
+              "width": "fill_container",
+              "descendants": {
+                "PgoyG": {
+                  "fill": "$color-background-transparent"
+                },
+                "OzJRQ": {
+                  "fill": "$color-icon-secondary"
+                },
+                "YghfT": {
+                  "fill": "$color-text-secondary"
+                },
+                "bQwI1": {
+                  "type": "frame",
+                  "id": "uGTEZ",
+                  "name": "선택 Filled 아이콘 · MY",
+                  "width": 24,
+                  "height": 24,
+                  "fill": "$color-icon-brand",
+                  "cornerRadius": 7,
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "t3D0P",
+                      "type": "ref",
+                      "ref": "Wsjxq",
+                      "name": "선택 MY 아이콘 · 24",
+                      "width": 24,
+                      "height": 24,
+                      "fill": "$color-icon-on-brand"
+                    }
+                  ]
+                },
+                "w0dm9c": {
+                  "fill": "$color-text-brand"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "JCkTZ",
+          "type": "ref",
+          "ref": "EgQVj",
+          "name": "결제 취소 확인 모달",
+          "layoutPosition": "absolute",
+          "x": 0,
+          "y": 0,
+          "width": 360,
+          "height": 1024,
+          "descendants": {
+            "BMpUD": {
+              "width": 328
+            },
+            "Xl2P4": {
+              "content": "결제를 취소할까요?"
+            },
+            "o6eft": {
+              "content": "Standard 30일 구독을 취소합니다.\n\n예상 환불 금액은 환불 정책 확정 후 계산되며, 취소가 완료되면 혜택 종료 시점도 정책에 따라 적용돼요."
+            },
+            "jJvaz": {
+              "justifyContent": "start",
+              "alignItems": "center",
+              "gap": 8
+            },
+            "pmcCr": {
+              "width": "fill_container",
+              "height": 40
+            },
+            "H8pRn": {
+              "id": "dYab6",
+              "type": "ref",
+              "ref": "rpp02",
+              "name": "결제 취소 확인 버튼",
+              "width": "fill_container",
+              "height": 40,
+              "cornerRadius": 12,
+              "gap": 8,
+              "padding": [
+                0,
+                16
+              ],
+              "descendants": {
+                "yjO5F": {
+                  "enabled": false
+                },
+                "d7HYE": {
+                  "content": "결제 취소"
+                },
+                "yR2vE": {
+                  "enabled": false
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "xZUmN",
+      "x": 9240,
+      "y": 0,
+      "name": "숨은맛집 · 구독 안내",
+      "clip": true,
+      "width": 360,
+      "height": 900,
+      "fill": "$color-background-default",
+      "layout": "vertical",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Ogkd8",
+          "name": "구독 안내 상태 표시줄",
+          "width": "fill_container",
+          "height": 62,
+          "padding": [
+            0,
+            "$spacing-20"
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "id": "F2LZH",
+              "type": "ref",
+              "ref": "rA4ir",
+              "name": "현재 시간",
+              "content": "9:41",
+              "fill": "$color-text-default"
+            },
+            {
+              "type": "frame",
+              "id": "Kj56U",
+              "name": "시스템 아이콘",
+              "gap": "$spacing-8",
+              "alignItems": "center",
+              "children": [
+                {
+                  "id": "LMotn",
+                  "type": "ref",
+                  "ref": "y6mY2m",
+                  "name": "상태 신호 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "dJcOG",
+                  "type": "ref",
+                  "ref": "qohVE",
+                  "name": "상태 연결 아이콘",
+                  "width": 16,
+                  "height": 16,
+                  "fill": "$color-icon-default"
+                },
+                {
+                  "id": "M1MAr",
+                  "type": "ref",
+                  "ref": "o7lslP",
+                  "name": "상태 배터리 아이콘",
+                  "width": 20,
+                  "height": 20,
+                  "fill": "$color-icon-default"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "UGQN4",
+          "type": "ref",
+          "ref": "hqODY",
+          "name": "구독 안내 Top Navigation",
+          "width": "fill_container",
+          "descendants": {
+            "cJ4N4": {
+              "content": "구독 안내"
+            },
+            "w4xXkP": {
+              "enabled": true,
+              "opacity": 0
+            }
+          }
+        },
+        {
+          "type": "frame",
+          "id": "CvvHW",
+          "name": "구독 안내 콘텐츠",
+          "width": "fill_container",
+          "height": "fill_container",
+          "layout": "vertical",
+          "gap": 24,
+          "padding": [
+            28,
+            16,
+            32,
+            16
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "hddSJ",
+              "name": "구독 안내",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 8,
+              "children": [
+                {
+                  "id": "bkyr4",
+                  "type": "ref",
+                  "ref": "OBS0d",
+                  "name": "구독 안내 제목",
+                  "content": "광고 없이, 더 좋은 숨은 맛집을 오래",
+                  "fill": "$color-text-default"
+                },
+                {
+                  "id": "N08RI",
+                  "type": "ref",
+                  "ref": "PzihL",
+                  "name": "구독 안내 설명",
+                  "content": "구독은 단순한 기능 구매가 아니라 지역의 좋은 맛집을 꾸준히 발굴하고, 광고 없는 커뮤니티를 운영하기 위한 멤버십이에요.",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "fill": "$color-text-secondary"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "TxQgi",
+              "name": "구독 가치 설명",
+              "width": "fill_container",
+              "fill": "$color-background-brand-subtle",
+              "cornerRadius": 16,
+              "stroke": "$color-border-brand",
+              "strokeWidth": 1,
+              "strokeAlignment": "inner",
+              "layout": "vertical",
+              "gap": 12,
+              "padding": 16,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "h0nHa",
+                  "name": "구독 가치 헤더",
+                  "width": "fill_container",
+                  "gap": 8,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "id": "D6sV6F",
+                      "type": "ref",
+                      "ref": "j3syLR",
+                      "name": "구독 가치 하트 아이콘",
+                      "width": 16,
+                      "height": 16,
+                      "fill": "$color-icon-brand"
+                    },
+                    {
+                      "id": "nhj3R",
+                      "type": "ref",
+                      "ref": "zhAxy",
+                      "name": "구독 가치 제목",
+                      "content": "구독하면 함께 만드는 것",
+                      "fill": "$color-text-default"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "y7Imx",
+                  "name": "숨은 맛집 발굴 가치 항목",
+                  "width": "fill_container",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "ENMUV",
+                      "name": "숨은 맛집 발굴 아이콘 배경",
+                      "width": 28,
+                      "height": 28,
+                      "fill": "$color-background-elevated",
+                      "cornerRadius": 8,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "Z6KSa",
+                          "name": "숨은 맛집 발굴 아이콘",
+                          "width": 16,
+                          "height": 16,
+                          "icon": "search",
+                          "library": "lucide",
+                          "fill": "$color-icon-brand"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "D0u64",
+                      "name": "숨은 맛집 발굴 설명",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "id": "IJHnn",
+                          "type": "ref",
+                          "ref": "rA4ir",
+                          "name": "숨은 맛집 발굴 제목",
+                          "content": "숨은 맛집 발굴",
+                          "fill": "$color-text-default"
+                        },
+                        {
+                          "id": "a9dlVV",
+                          "type": "ref",
+                          "ref": "O7fbW",
+                          "name": "숨은 맛집 발굴 본문",
+                          "content": "운영팀의 지역 탐색과 좋은 콘텐츠 확보를 지원해요.",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "fill": "$color-text-secondary"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "V4QNm",
+                  "name": "광고 없는 운영 가치 항목",
+                  "width": "fill_container",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "unRjM",
+                      "name": "광고 없는 운영 아이콘 배경",
+                      "width": 28,
+                      "height": 28,
+                      "fill": "$color-background-elevated",
+                      "cornerRadius": 8,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "hHT8w",
+                          "name": "광고 없는 운영 아이콘",
+                          "width": 16,
+                          "height": 16,
+                          "icon": "shield-check",
+                          "library": "lucide",
+                          "fill": "$color-icon-brand"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "FmbZD",
+                      "name": "광고 없는 운영 설명",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "id": "KIIbv",
+                          "type": "ref",
+                          "ref": "rA4ir",
+                          "name": "광고 없는 운영 제목",
+                          "content": "광고 없는 운영",
+                          "fill": "$color-text-default"
+                        },
+                        {
+                          "id": "o2q0GY",
+                          "type": "ref",
+                          "ref": "O7fbW",
+                          "name": "광고 없는 운영 본문",
+                          "content": "협찬 순위 대신 이웃의 솔직한 기록을 지켜요.",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "fill": "$color-text-secondary"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "b5gy6F",
+                  "name": "멤버 전용 혜택 가치 항목",
+                  "width": "fill_container",
+                  "gap": 10,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "zYnip",
+                      "name": "멤버 전용 혜택 아이콘 배경",
+                      "width": 28,
+                      "height": 28,
+                      "fill": "$color-background-elevated",
+                      "cornerRadius": 8,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "rZcyU",
+                          "name": "멤버 전용 혜택 아이콘",
+                          "width": 16,
+                          "height": 16,
+                          "icon": "sparkles",
+                          "library": "lucide",
+                          "fill": "$color-icon-brand"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "yhgqm",
+                      "name": "멤버 전용 혜택 설명",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "id": "ZpgoW",
+                          "type": "ref",
+                          "ref": "rA4ir",
+                          "name": "멤버 전용 혜택 제목",
+                          "content": "멤버 전용 혜택",
+                          "fill": "$color-text-default"
+                        },
+                        {
+                          "id": "LyZmu",
+                          "type": "ref",
+                          "ref": "O7fbW",
+                          "name": "멤버 전용 혜택 본문",
+                          "content": "Standard·Premium 혜택은 확정되는 즉시 공개해요.",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "fill": "$color-text-secondary"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "NsxUx",
+                  "name": "혜택 확정 전 결제 안내",
+                  "width": "fill_container",
+                  "fill": "$color-background-warning-subtle",
+                  "cornerRadius": 10,
+                  "gap": 8,
+                  "padding": 10,
+                  "children": [
+                    {
+                      "id": "l0eGco",
+                      "type": "ref",
+                      "ref": "CoYrb",
+                      "name": "혜택 확정 안내 아이콘",
+                      "width": 16,
+                      "height": 16,
+                      "fill": "$color-icon-warning"
+                    },
+                    {
+                      "id": "QMuop",
+                      "type": "ref",
+                      "ref": "O7fbW",
+                      "name": "혜택 확정 안내 문구",
+                      "content": "가격과 개인 혜택이 확정되기 전에는 실제 결제가 진행되지 않아요.",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "fill": "$color-text-warning"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "wHMWN",
+              "name": "구독 운영 약속",
+              "width": "fill_container",
+              "layout": "vertical",
+              "gap": 12,
+              "children": [
+                {
+                  "id": "v5B9g",
+                  "type": "ref",
+                  "ref": "b1zHzO",
+                  "name": "구독 운영 약속 제목",
+                  "content": "구독료는 이렇게 쓰여요",
+                  "fill": "$color-text-default"
+                },
+                {
+                  "type": "frame",
+                  "id": "kmHkH",
+                  "name": "지역 탐색 운영 약속",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "sP3Oz",
+                      "name": "지역 탐색 운영 약속 아이콘 배경",
+                      "width": 40,
+                      "height": 40,
+                      "fill": "$color-background-subtle",
+                      "cornerRadius": 12,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "Sbobj",
+                          "name": "지역 탐색 운영 약속 아이콘",
+                          "width": 20,
+                          "height": 20,
+                          "icon": "map-pin",
+                          "library": "lucide",
+                          "fill": "$color-icon-brand"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "Ud8Yw",
+                      "name": "지역 탐색 운영 약속 설명",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "id": "w6pPO",
+                          "type": "ref",
+                          "ref": "rA4ir",
+                          "name": "지역 탐색 운영 약속 제목",
+                          "content": "지역 탐색",
+                          "fill": "$color-text-default"
+                        },
+                        {
+                          "id": "mCH5d",
+                          "type": "ref",
+                          "ref": "O7fbW",
+                          "name": "지역 탐색 운영 약속 본문",
+                          "content": "구로에서 차로 갈 만한 새로운 장소를 직접 찾고 검증해요.",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "fill": "$color-text-secondary"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MVr3J",
+                  "name": "콘텐츠 품질 운영 약속",
+                  "width": "fill_container",
+                  "gap": 12,
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "f8vBU",
+                      "name": "콘텐츠 품질 운영 약속 아이콘 배경",
+                      "width": 40,
+                      "height": 40,
+                      "fill": "$color-background-subtle",
+                      "cornerRadius": 12,
+                      "justifyContent": "center",
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon",
+                          "id": "YZ6lB",
+                          "name": "콘텐츠 품질 운영 약속 아이콘",
+                          "width": 20,
+                          "height": 20,
+                          "icon": "image",
+                          "library": "lucide",
+                          "fill": "$color-icon-brand"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "frame",
+                      "id": "w3XuN",
+                      "name": "콘텐츠 품질 운영 약속 설명",
+                      "width": "fill_container",
+                      "layout": "vertical",
+                      "gap": 2,
+                      "children": [
+                        {
+                          "id": "KxKp0",
+                          "type": "ref",
+                          "ref": "rA4ir",
+                          "name": "콘텐츠 품질 운영 약속 제목",
+                          "content": "콘텐츠 품질",
+                          "fill": "$color-text-default"
+                        },
+                        {
+                          "id": "yC5fL",
+                          "type": "ref",
+                          "ref": "O7fbW",
+                          "name": "콘텐츠 품질 운영 약속 본문",
+                          "content": "사진과 주소, 주차 정보를 더 정확하게 관리해요.",
+                          "textGrowth": "fixed-width",
+                          "width": "fill_container",
+                          "fill": "$color-text-secondary"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "vluxE",
+              "name": "구독 안내 유연 여백",
+              "width": "fill_container",
+              "height": "fill_container"
+            },
+            {
+              "id": "H7W4K",
+              "type": "ref",
+              "ref": "u8QYqM",
+              "name": "요금제 확인 버튼",
+              "width": "fill_container",
+              "descendants": {
+                "awFiz": {
+                  "enabled": false
+                },
+                "rCnmy": {
+                  "content": "요금제 확인하기"
+                },
+                "ujax6": {
+                  "enabled": true
                 }
               }
             }

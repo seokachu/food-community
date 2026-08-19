@@ -15,6 +15,8 @@ import { TextField } from "@/components/ui/TextField";
 import { TopNavigation } from "@/components/ui/TopNavigation";
 import { FEATURED_PLACE_ID, getPlace, RECENT_PLACE_IDS } from "@/lib/places";
 
+import { SubscriptionPromo } from "./SubscriptionPromo";
+
 export const metadata = {
   title: "숨은맛집 · 홈",
   description: "구로에서 차로 한 시간, 직접 다녀온 동네 맛집 이야기.",
@@ -51,6 +53,9 @@ export default function HomePage() {
             aria-label="맛집 검색"
           />
         </section>
+
+        {/* 구독(v1.1) 진입점. 배너를 누르면 구독 안내 시트가 뜬다. */}
+        <SubscriptionPromo />
 
         {/* 이번 주의 숨은 한끼 */}
         <section className="flex flex-col gap-3">

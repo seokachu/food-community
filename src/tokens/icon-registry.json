@@ -35,5 +35,8 @@
   "star": "star",
   "comment": "message-circle",
   "image": "image",
-  "map-pin": "map-pin"
+  "map-pin": "map-pin",
+  "shield-check": "shield-check",
+  "sparkles": "sparkles",
+  "receipt": "receipt-text"
 }

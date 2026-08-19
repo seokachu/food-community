@@ -27,10 +27,13 @@ import {
   MessageCircle,
   Pencil,
   Plus,
+  ReceiptText,
   RefreshCw,
   Search,
   Settings,
   Share2,
+  ShieldCheck,
+  Sparkles,
   Star,
   Trash2,
   TriangleAlert,
@@ -44,6 +47,8 @@ import {
  * 키는 디자인 시스템의 시맨틱 이름, 값은 그 이름이 실제로 렌더하는 lucide 아이콘이다.
  * 둘은 일치하지 않는 경우가 많다 (close -> x, delete -> trash-2, error -> circle-x ...).
  * map-pin 은 시안에 없지만 네이버 지도 연동(중심 고정 핀)을 위해 코드에서 추가했다.
+ * shield-check · sparkles · receipt 은 구독(v1.1) 시안이 lucide 이름으로 직접
+ * 그린 인라인 아이콘이라 컴포넌트 목록 밖에서 추가됐다.
  */
 export const iconMap = {
   "arrow-left": ArrowLeft,
@@ -83,6 +88,9 @@ export const iconMap = {
   comment: MessageCircle,
   image: ImageIcon,
   "map-pin": MapPin,
+  "shield-check": ShieldCheck,
+  sparkles: Sparkles,
+  receipt: ReceiptText,
 } satisfies Record<string, LucideIcon>;
 
 export type IconName = keyof typeof iconMap;
